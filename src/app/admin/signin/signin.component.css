@@ -1,0 +1,139 @@
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /* border: 2px solid #e6e3e3; */
+  border: none;
+  border-radius: 0px;
+  color: #0d0d0d;
+  padding: 5px 2px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 0px;
+  width: 100%;
+  border-bottom: 2px solid #e6e3e3;
+}
+::ng-deep .ui-toast-message-content{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+::ng-deep .ui-toast-message{
+  margin: 0 auto!important;
+}
+::ng-deep .ui-toast .ui-toast-message-content {
+  padding-left:32px !important;
+  padding-top:2px;
+}
+.hide {
+  display: none;
+}
+.inner-addon {
+  position: relative;
+}
+.inner-addon .fa {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  padding: 4px;
+  z-index: 100;
+  cursor: pointer;
+  margin: -13px -11px 13px 13px;
+}
+.fa {
+  font-size: 19px;
+  color: #4b8693;
+}
+.invalid-feedback div {
+  font-size: 12px;
+  color: rgb(255, 32, 32) !important;
+}
+.button-blue {
+  font-size: 22px;
+  margin: 51px 0px 59px -3px;
+  font-weight: bold;
+}
+.login-new-user a {
+  margin: 5px 8px 4px 5px;
+}
+
+.fa {
+  font-size: 19px;
+}
+.signinemail{
+  font-size: 14px;
+  color: #696969;
+  font-weight: 300;
+}
+.signinpass{
+  font-size: 14px;
+  color: #696969;
+  font-weight: 300;
+  padding-top: 34px;
+}
+.eye-hide{
+  top: 86px !important;
+  right: 32px;
+}
+.eye-show{
+  top: 86px !important;
+  right: 32px;
+}
+@media (max-width: 1300px) {
+  .button-blue {
+    font-size: 14px;
+    margin: 24px 0px 24px -3px;
+    font-weight: bold;
+  }
+  .bg {
+    padding-top: 56px !important;
+  }
+  .login-h1 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 1360px) {
+  .login-wrapper {
+    padding-top: 90.4px;
+    padding-bottom: 130px;
+
+}
+.logo-login {
+    width:56.9px;
+    padding: 0px !important;
+    margin-top: 45.3px;
+}
+.box-login {
+  width:414px;
+  margin-left:107px;
+}
+.login-h1 {
+  margin-top: 10px;
+  font-size: 18px;
+  padding-bottom: 57px !important;
+}
+
+.form-box-login .inner-addon {
+  margin-bottom: 18.4px !important;
+}
+.login-forgot-password {
+  font-size: 14px;
+}
+.form-box{
+  padding-bottom: 16px;
+}
+.form-box-login{
+  padding-left:42px;
+
+}
+}
+@media (max-width: 576px){
+
+.wrapper {
+    margin: 0px;
+    padding-bottom: 50px;
+}
+.box-login {
+  width:300px;
+  margin-left:25px;
+}
+}

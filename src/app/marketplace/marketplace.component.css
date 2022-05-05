@@ -1,0 +1,131 @@
+.container {
+    background-color: #fff;   
+    height: 650px;
+}
+
+.crunch-exp{
+    margin-bottom: 16px;
+    font-family: HelveticaNeueLight;
+    font-size: 72px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.97;
+    letter-spacing: 2.84px;
+    text-align: left;
+    color: #7d7d7d;
+  }
+  .borderCss{
+    margin: 0 auto;
+    width: 980px;
+    border-bottom: 1px solid #969695;
+  }
+  .mailText{
+  height: 23px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: #555353 !important;
+  }
+  /* .crunch-exp2{
+    height: 140px;
+    font-family: HelveticaNeue;
+    font-size: 72px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.97;
+    letter-spacing: -2.16px;
+    text-align: left;
+    color: #7d7d7d;
+    margin-top: -40px;
+    border-bottom: 1px solid #969695;
+  } */
+.crunch-box-bar{
+    background-color:#1E76AC;
+    width: 100%;
+    padding-left: calc((100% - 980px) * 0.5);
+}
+.crunch-box-bar .crunch-head {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+  }
+.bg{
+    background-color:#f0f0f0;
+    /* padding-top:89px; */
+}
+.crunch-item-bg {
+    display: flex;
+    flex-direction: column;  
+    /* align-items: center; */
+    background-color: #f0f0f0;
+    width: 980px;
+    margin-top: 51px;
+    margin-bottom: 51px;
+    margin-left:  calc((100% - 980px) * 0.5);
+    box-shadow: none;
+}
+.crunch-item-bg img {
+    /* width: 70px; */
+    padding-bottom: 15px;
+    padding-top: 99.3px;
+    width: 83.3px;
+}
+.crunch-content{
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+  color: #555353;
+}
+
+.small {
+    font-size: 16px;
+}
+.crunch-body{
+    margin-top: 30.5px;
+    margin-bottom: 0px;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2a2929;
+}
+.crunch-content2{
+    margin-bottom: 0px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: left;
+  color: #555353;
+}
+.crunch-body2{
+    margin-top: 24px;
+    margin-bottom: 0px;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2a2929;
+}

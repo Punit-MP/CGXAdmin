@@ -1,0 +1,397 @@
+.bg {
+  padding-top: 80px;
+}
+
+.navbar-light {
+  padding-left: 2.1%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 2%;
+}
+
+.navbar-light .navbar-brand {
+  padding-left: 0px !important;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+::ng-deep .ui-toast-message-content {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+#navbarCollapse {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#navbarCollapse .navbar-nav {
+  height: 26.7px;
+}
+
+.profile-name-top {
+  margin-right: 7.25px;
+  border-left: 1px solid #000000;
+  padding-bottom: 2px;
+  padding-top: 2px;
+  margin-top: 13px;
+}
+
+.user-icon-li i {
+  margin-top: 10px;
+  margin-right: 7.25px;
+}
+
+.box-crunch {
+  height: auto !important;
+}
+
+.crunch-box-bar .crunch-head {
+  color: #fefefe;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 140px;
+  padding-top: 9px;
+}
+
+.crunch-box-bar .fa {
+  color: #fefefe;
+}
+
+.crunch-head span {
+  margin-left: 12px;
+  color: #fefefe;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.admincrunch-item-bg {
+  width: 86.4%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 67px;
+  margin-bottom: 67px;
+  clear: both;
+  overflow: auto;
+  /* padding-right: 5.5%; */
+}
+
+.returncrunch-right {
+  color: #fefefe;
+  font-size: 16px;
+  margin-right: 137px;
+  margin-top: 8px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fefefe;
+}
+
+.management-label {
+  color: #fff;
+  margin-right: 20px;
+  opacity: 0.5;
+}
+
+.admin-crunch {
+  border-left: 1px solid #ffffff;
+  color: #fefefe;
+  padding-left: 13px;
+}
+
+.crunch-left {
+  width: 29.2%;
+  background-color: #ffffff;
+  float: left;
+}
+
+.admin-crunchtoolimg1 {
+  width: 58.5%;
+  margin-top: 53px;
+  margin-bottom: 64px;
+  float: right;
+  margin-right: 24px;
+}
+
+::ng-deep .ui-dialog-footer .ui-button {
+  background-color: #1e76ac !important;
+}
+
+::ng-deep .ui-button-text-icon-left .ui-button-text {
+  background-color: #1e76ac !important;
+  color: #ffffff !important;
+}
+
+/* ::ng-deep .pi {
+        color: #FFFFFF !important;
+      } */
+::ng-deep .ui-button-icon-left.ui-clickable.pi.pi-times {
+  color: #ffffff !important;
+}
+
+.admin-crunchtoolimg2 {
+  /* padding-left: 5.5%; */
+  /* padding-left: 89px;
+        margin-right:54px; */
+  width: 54.5%;
+  padding-right: 0px;
+  margin-left: 10.6%;
+}
+
+.admin-crunchtoolimg3 {
+  width: 54.5%;
+  padding-right: 0px;
+  margin-left: 6%;
+}
+
+.crunchtool-images {
+  width: 100%;
+  clear: both;
+}
+
+.crunch-right {
+  float: left;
+  width: 64.8%;
+  background-color: #ffffff;
+  padding-left: 79px;
+  margin-top: 38px !important;
+}
+
+.crunch-right-head {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  padding-left: 0px !important;
+  float: left;
+}
+
+.edit-button {
+  border: solid 1px #4b8693;
+  padding: 4px 20.7px 4px 25px;
+  margin-right: 3.3%;
+  border-radius: 33px;
+  /* box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1); */
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fa-edit {
+  color: #4b8693;
+  margin: 0 0 0px 12.3px;
+  font-size: 17px;
+}
+
+.delete-button {
+  border: solid 1px #1e76ac;
+  background-color: #1e76ac;
+  padding: 4px 18.8px 4px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 33px;
+  /* box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);   */
+}
+
+.fa-trash-o {
+  color: #f9f9f9;
+  margin: 0 0 0px 12.3px;
+  font-size: 17px;
+}
+
+.crunch-toolinfo-details {
+  clear: both;
+}
+
+.crunch-creator {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 0px;
+  padding-bottom: 6px;
+  float: left;
+  padding-left: 0px !important;
+}
+
+.crunch-device {
+  font-size: 20px;
+  float: left;
+  text-align: right;
+}
+
+/* .crunch-toolinfo-details{
+        border-bottom:0.75px solid #000000;
+    } */
+.admin-crunchtext {
+  font-size: 20px;
+  line-height: 1.3;
+  margin-bottom: 11px;
+  color: #000;
+  border-top: 1px solid #000;
+  clear: both;
+  padding-top: 20.4px;
+  width: 98%;
+}
+
+.crunchdet-click {
+  font-size: 20px;
+  font-weight: bold;
+  color: #728ce8;
+  margin-bottom: 59px;
+}
+
+.crunchboxdetails-info {
+  padding-top: 59px;
+}
+
+.tool-information {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tool-information-det {
+  font-size: 20px;
+}
+
+.price-details {
+  margin-bottom: 57px;
+}
+
+.tool-details-border1 {
+  border-bottom: 1px solid#000;
+  margin-bottom: 122px;
+}
+
+.tooldetail-buttons {
+  margin-top: 9px;
+  text-align: right;
+  float: left;
+}
+
+.admin-user {
+  padding-top: 10px;
+}
+
+::ng-deep .ui-dialog-mask {
+  position: inherit;
+}
+
+::ng-deep .ui-dialog {
+  margin-top: 50%;
+}
+
+::ng-deep .yesbtn.ui-button-text-icon-left .ui-button-text {
+  background-color: #ffffff !important;
+  color: #2c2c2c !important;
+}
+
+::ng-deep .nobtn.ui-button-text-icon-left .ui-button-text {
+  background-color: #1e76ac !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 770px) {
+  .admin-crunchtoolimg2 {
+    margin-left: 0px;
+    width: 50%;
+  }
+
+  .admin-crunchtoolimg3 {
+    margin-left: 0px;
+    width: 50%;
+  }
+}
+
+@media (max-width: 1440px) {
+  .admin-crunchtoolimg2 {
+    /* padding-left: 0px; */
+    margin-right: 0px;
+  }
+
+  /*        
+        .admin-crunchtext{
+            padding-left: 10px;
+        } */
+}
+
+@media (max-width: 1300px) {
+  .admincrunch-item-bg {
+    width: 89.4%;
+  }
+
+  .admin-toolinfo {
+    display: flex;
+    margin-top: -34px;
+    margin-left: 32px !important;
+  }
+
+  .crunch-box-bar .fa {
+    color: #fefefe;
+  }
+
+  .crunch-head span {
+    font-size: 18px;
+  }
+
+  .returncrunch-right {
+    margin-top: 0px !important;
+    padding-right: 67px;
+    margin-right: 0px;
+  }
+
+  .crunch-box-bar .crunch-head {
+    margin-left: 67px;
+    padding-top: 0px;
+    margin-top: -6px;
+  }
+
+  .crunch-box-bar {
+    min-height: 56px;
+  }
+
+  .management-label,
+  .admin-crunch {
+    font-size: 14px;
+  }
+
+  .crunch-right-head {
+    font-size: 22px;
+  }
+
+  .crunch-creator,
+  .crunch-device {
+    font-size: 16px;
+  }
+
+  .crunchboxdetails-info {
+    padding-top: 37px;
+  }
+
+  .admin-crunchtext,
+  .crunchdet-click,
+  .tool-information,
+  .tool-information-det {
+    font-size: 16px;
+  }
+
+  .crunch-right {
+    padding-left: 57px !important;
+  }
+
+  .bg {
+    padding-top: 56px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 771px) {
+  .crunchtool-images {
+    margin-left: 27px;
+  }
+}

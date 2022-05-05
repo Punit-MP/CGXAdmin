@@ -1,0 +1,157 @@
+<p-toast position="bottom-right" key="signupKey"></p-toast>
+<div class="container-fluid">
+    <div class="bg-image">
+        <div class="">
+            <div class="wrapper signup-wrapper">
+                <div class="box signup-box">
+                    <div class="topbar">
+                        <img src="../../assets/images/logo.png" class="logo" />
+                    </div>
+                    <form (ngSubmit)="frm.form.valid && onSubmit(frm);" #frm="ngForm" novalidate
+                        [mustMatch]="['password', 'confirm_password']">
+                        <div class="form-box">
+                            <span class="signUp-Title">Create An Account</span>
+                            <div class="signupgroup">
+                                <div class="row ">
+                                    <div class="col  mt-1 no-padding">
+                                        <div class="input-group ">
+                                            <input
+                                                class="form-control noFocus py-2 input-textbox  pl-0 signup-placeholder"
+                                                type="text" [(ngModel)]="signUp.first_name" placeholder="First Name"
+                                                name="first_name" required minlength="3" maxlength="16"
+                                                pattern="^[a-zA-Z]*$" #fName="ngModel" autocomplete="off"
+                                                [ngClass]="{ 'is-invalid': frm.submitted && fName.invalid }">
+                                            <!-- <div *ngIf="submitted && fName.errors && fName.touched" class="invalid-error1"> -->
+                                            <div *ngIf="frm.submitted && fName.invalid" class="invalid-feedback">
+                                                <div *ngIf="fName.errors.required">First Name is required</div>
+                                                <div *ngIf="fName.errors.minlength">Minimum length is 3 characters</div>
+                                                <div *ngIf="fName.errors.maxlength">Maximun length is 16 characters
+                                                </div>
+                                                <div *ngIf="fName.errors?.pattern">First Name is not valid</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mt-1 no-padding ">
+                                        <div class="input-group Lname">
+                                            <input class="form-control noFocus py-2 input-textbox placeholders"
+                                                type="text" placeholder="Last Name" [(ngModel)]="signUp.last_name"
+                                                name="last_name" required minlength="3" maxlength="16"
+                                                pattern="^[a-zA-Z]*$" #lName="ngModel" autocomplete="off"
+                                                [ngClass]="{ 'is-invalid': frm.submitted && lName.invalid }">
+                                            <div *ngIf="frm.submitted && lName.invalid" class="invalid-feedback">
+                                                <div *ngIf="lName.errors.required">Last Name is required</div>
+                                                <div *ngIf="lName.errors.minlength">Minimum length is 3 characters</div>
+                                                <div *ngIf="lName.errors.maxlength">Maximun length is 16 characters
+                                                </div>
+                                                <div *ngIf="lName.errors?.pattern">Last Name is not valid</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="row"> -->
+                                <div class="mt-1 no-padding">
+                                    <div class="input-group Email">
+                                        <input class="form-control noFocus py-2 input-textbox" type="email"
+                                            placeholder="Email Address" [(ngModel)]="signUp.email" name="email" required
+                                            email #emailRef="ngModel"
+                                            [ngClass]="{ 'is-invalid': frm.submitted && emailRef.invalid }">
+                                        <div *ngIf="frm.submitted && emailRef.invalid" class="invalid-feedback">
+                                            <div *ngIf="emailRef.errors.required">Email is required</div>
+                                            <div *ngIf="emailRef.errors.email">Email must be a valid email address</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- </div>  -->
+                                <!-- <div class="row "> -->
+                                <div class=" mt-1">
+                                    <div class="input-group institution">
+                                        <input class="form-control noFocus py-2 input-textbox institutionplaceholder"
+                                            type="text" [(ngModel)]="signUp.institution" placeholder="Institution"
+                                            name="institution" required minlength="3" #Institution="ngModel"
+                                            autocomplete="off"
+                                            [ngClass]="{ 'is-invalid': frm.submitted && Institution.invalid }">
+                                        <div *ngIf="frm.submitted && Institution.invalid" class="invalid-feedback">
+                                            <div *ngIf="Institution.errors.required">Institution is required</div>
+                                            <div *ngIf="Institution.errors.minlength">Minimum length is 3 characters
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- password -->
+                                <div class="mt-1">
+                                    <div class="input-group inner-addon signuppassword">
+                                        <i alt="show" class="eye-show signupshow" (click)="showPassword = !showPassword"
+                                            [class.hide]="!showPassword"></i>
+                                        <i alt="hide" class="eye-hide signupshow" (click)="showPassword = !showPassword"
+                                            [class.hide]="showPassword"></i>
+                                        <input [type]="showPassword ? 'text' : 'password'"
+                                            class="form-control noFocus py-2 input-textbox input-field-r-pad"
+                                            placeholder="Password" name="password" [(ngModel)]="signUp.password"
+                                            #password="ngModel"
+                                            [ngClass]="{ 'is-invalid': frm.submitted && password.invalid }" required
+                                            minlength="6" />
+                                        <div *ngIf="frm.submitted && password.invalid" class="invalid-feedback">
+                                            <div *ngIf="password.errors.required">Password is required</div>
+                                            <div *ngIf="password.errors.minlength">Minimum length is 6 characters</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- confirm password -->
+                                <div class=" mt-1">
+                                    <div class="input-group form-res inner-addon signupconfirmpassword">
+                                        <input [type]="showConfirmPassword ? 'text' : 'password'"
+                                            class="form-control noFocus py-2 input-textbox input-field-r-pad"
+                                            name="confirm_password" placeholder="Confirm Password"
+                                            [(ngModel)]="signUp.confirm_password" #confirm_password="ngModel"
+                                            [ngClass]="{ 'is-invalid': frm.submitted && confirm_password.invalid }"
+                                            required mat />
+                                        <i alt="show" class="eye-show"
+                                            (click)="showConfirmPassword = !showConfirmPassword"
+                                            [class.hide]="!showConfirmPassword"></i>
+                                        <i alt="hide" class="eye-hide"
+                                            (click)="showConfirmPassword = !showConfirmPassword"
+                                            [class.hide]="showConfirmPassword"></i>
+                                        <div *ngIf="frm.submitted && confirm_password.invalid" class="invalid-feedback">
+                                            <div *ngIf="confirm_password.errors.required">Confirm Password is required
+                                            </div>
+                                            <div *ngIf="confirm_password.errors.mustMatch">Passwords must match</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="accept_checkbox">
+                                <input type="checkbox" name="terms_of_use" [ngModel]="signUp.terms_of_use" required
+                                    #tc="ngModel"><label>
+                                    <a target="_blank" href="https://www.cgxsystems.com/privacy-statement">Agree To The
+                                        Terms & Conditions</a>
+                                </label>
+                            </p>
+                            <div *ngIf="tc.invalid">
+                                <div class="invalid-check" *ngIf="frm.submitted">
+                                    Check Terms & Conditions
+                                </div>
+                            </div>
+                            <button type="submit" class="btn button-blue signupbtn  text-white">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <!--end Form box-->
+
+            </div>
+            <!--end wrapper-->
+
+        </div>
+        <!--end container-->
+    </div>
+    <!--end bg image-->
+</div>
+<!--end container-fluid-->
+<div *ngIf="blocked_signup_Wait">
+    <div class="loader" id="loaderSelection" role="dialog">
+        <img src="assets/images/loader.gif" alt="Loader">
+    </div>
+</div>

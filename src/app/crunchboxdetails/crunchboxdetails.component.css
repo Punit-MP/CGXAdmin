@@ -1,0 +1,293 @@
+::ng-deep strong {
+    font-weight: bold !important;
+    color: #2A2929;
+}
+::ng-deep p {
+    color: #555353 !important;
+}
+
+.bg {
+    background-color: #f0f0f0 !important;
+    /* padding-top:89px; */
+}
+
+body {
+    overflow: hidden !important;
+}
+
+.buynowhide {
+    display: none;
+}
+
+.crunch-box-bar {
+    background-color: #1e76ac;
+}
+
+.crunch-box-bar .crunch-head {
+    padding-left: calc((100% - 980px) * 0.5);
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.crunch-box-bar .returncrunch-right {
+    color: #fefefe;
+    font-size: 16px;
+    margin-right: 20px;
+}
+
+.crunch-head a i {
+    margin-right: 20px;
+}
+
+input[type=checkbox] {
+    width: 30px;
+    height: 30px;
+}
+
+.crunch-box-bar .fa {
+    color: #fefefe;
+}
+
+.crunch-box-bar a {
+    color: #fefefe;
+}
+
+.crunch-item-bg {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 980px;
+    margin-left: calc((100% - 980px) * 0.5);
+    margin-top: 28px;
+    margin-bottom: 51px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-color: transparent;
+
+}
+
+.crunch-item-bg .crunch-left {
+    width: 510px;
+    margin-right: 50px;
+    /* margin-top: 53px; */
+}
+
+.img-fluid {
+    width: 226px;
+    /* margin-left: 36%; */
+    height: auto;
+    /* margin-top:10px; */
+    /* height: 252px; */
+}
+
+.tool-det-img {
+    width: 105px;
+    margin-top: 15px;
+    /* margin-left: 17.8%; */
+}
+
+.tool-det-img1 {
+    width: 105px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.crunch-item-bg .crunch-right {
+    width: 420px;
+    margin: 0px;
+}
+
+.crunch-right-head {
+    height: 70px;
+    margin-bottom: 18px;
+    font-family: HelveticaNeueLight;
+    font-size: 72px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.97;
+    letter-spacing: 2.84px;
+    text-align: left;
+    color: #7d7d7d;
+    margin-left: calc((100% - 980px) * 0.5);
+    margin-top: 51px;
+}
+
+.borderCss {
+    width: 980px;
+    border-bottom: 1px solid #969695;
+}
+
+.crunchboxdetails-info {
+    /* padding-top:59px; */
+    background-color: #C0D5E0;
+    margin-top: 39px;
+    width: 420px;
+    /* height: 200px; */
+    padding: 12px 20px 12px 20px;
+}
+
+.row {
+    margin-left: 0px !important;
+}
+
+.tool-information {
+    width: 85px;
+    flex-grow: 0;
+    margin: 0 35px 0 0;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #555353;
+}
+
+.tool-information-det {
+    width: 173px;
+    flex-grow: 0;
+    font-family: HelveticaNeue;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #555353;
+}
+
+.tool-details-border {
+    border-bottom: 0.75px solid #000000 !important;
+}
+
+.tool-details-border1 {
+    border-bottom: 0.75px solid #000000 !important;
+    margin-bottom: 74px;
+    margin-top: 27px;
+    clear: both;
+}
+
+.crunchdet-click {
+    color: #3C70BD;
+    font-size: 16px;
+    font-weight: 300;
+    /* font-weight: bold;   */
+}
+
+.crunch-right-sub-head, .crunch-right-sub-head1, .crunch-right-sub-head2, .crunch-right-sub-head3 {
+    font-family: HelveticaNeue;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: normal;
+    letter-spacing: normal;
+    /* margin: 30px 62px 20px 72px; */
+    margin-bottom: 20px;
+}
+
+.crunch-right-sub-head1 {
+    margin-left: 107px;
+}
+
+.crunch-right-sub-head2 {
+    margin-left: 246px;
+}
+
+.crunch-right-sub-head3 {
+    margin-left: 307px;
+}
+
+.crunch-right-text {
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.44;
+    letter-spacing: normal;
+    text-align: left;
+    color: #555353;
+}
+
+.crunch-item-price {
+    color: #1e76ac;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.crunch-item-price .button-blue {
+    width: 200px;
+    height: 45px;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    padding: 13px 64px 17px;
+}
+
+.cru-price {
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1e76ac;
+    margin-top: 32px;
+    margin-right: 32px;
+}
+
+.button-blue {
+    border-radius: 25px;
+    font-size: 16px;
+    height: 35px;
+    padding: 5px 20px;
+    width: auto;
+    margin: 0;
+}
+
+.prod_info {
+    /* border-bottom: 1px solid #000; */
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.crunch-right {
+    margin-top: 0px !important;
+}
+
+.crunchdetails-user {
+    padding-top: 10px;
+}
+
+.infoLink {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    width: 400px;
+}
+
+.purchasereport {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    color: #3c70bd;
+}
+
+.click-info {
+    margin-top: 17px;
+    margin-left: 0px;
+}

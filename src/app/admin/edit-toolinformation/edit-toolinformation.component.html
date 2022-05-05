@@ -1,0 +1,197 @@
+<div class="container-fluid bg purchase-summary-main">
+    <app-admin-header></app-admin-header>
+    <div class="container-fluid box-crunch">
+        <div class="crunch-box-bar">
+            <div class="crunch-head"><a (click)="cgxService.goBack()"> <i class="fa fa-long-arrow-left edit-icon"
+                        aria-hidden="true"></i><span class="edit-head">Edit Tools Information</span> </a></div>
+            <div class="returncrunch-right">
+                <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+                    Management</span>
+                <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+                    Tools</span>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="editToolform" (ngSubmit)="onSubmit()">
+        <div class="edit-tools">
+            <div class="edittooldetails" *ngIf="tool">
+                <div class="row">
+                    <div class="form-group col-md-6 edit-left-d">
+                        <label class="edit-toollabel">Tool Name</label>
+                        <input class="edit-toolname form-control input-textbox" name="toolName" type="text"
+                            formControlName="toolName" [(ngModel)]="tool.tool_name"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.toolName.invalid }" />
+                        <div *ngIf="submitted && toolform.toolName.invalid" class="invalid-error">
+                            <div *ngIf="toolform.toolName.errors.required">Tool Name is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 edit-right-d">
+                        <label class="edit-toollabel">Version</label>
+                        <input class="edit-toolname form-control input-textbox" name="edittool" type="text"
+                            formControlName="version" [(ngModel)]="tool.version"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.version.invalid }" />
+                        <div *ngIf="submitted && toolform.version.invalid" class="invalid-error">
+                            <div *ngIf="toolform.version.errors.required">Version is required</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 edit-left-d">
+                        <label class="edit-toollabel">Author</label>
+                        <input class="edit-toolname form-control input-textbox" name="edittool" type="text"
+                            formControlName="creator" [(ngModel)]="tool.creator"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.creator.invalid }" />
+                        <div *ngIf="submitted && toolform.creator.invalid" class="invalid-error">
+                            <div *ngIf="toolform.creator.errors.required">Author is required</div>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-md-6 edit-right-d">
+                        <label class="edit-toollabel">Headset</label>
+                        <input formControlName="device" class="edit-toolname form-control input-textbox" name="device"
+                            type="text" [(ngModel)]="tool.description_name"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.device.invalid }" />
+                        <div *ngIf="submitted && toolform.device.invalid" class="invalid-error">
+                            <div *ngIf="toolform.device.errors.required">Headset is required</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 edit-left-d">
+                        <label class="edit-toollabel" for="edit-tool">Term</label>
+                        <input formControlName="term" class="edit-toolname form-control input-textbox" name="term"
+                            type="text" [(ngModel)]="tool.term"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.term.invalid }" />
+                        <div *ngIf="submitted && toolform.term.invalid" class="invalid-error">
+                            <div *ngIf="toolform.term.errors.required">Term is required</div>
+                        </div>
+
+                    </div>
+                    <div class="form-group col-md-6 edit-right-d">
+                        <label class="edit-toollabel">Format</label>
+                        <input formControlName="format" class="edit-toolname form-control input-textbox" name="format"
+                            type="text" [(ngModel)]="tool.format"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.format.invalid }" />
+                        <div *ngIf="submitted && toolform.format.invalid" class="invalid-error">
+                            <div *ngIf="toolform.format.errors.required">Format is required</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 edit-left-d">
+                        <label class="edit-toollabel">Clearance</label>
+                        <input formControlName="clearance" class="edit-toolname form-control input-textbox"
+                            name="clearance" type="text" [(ngModel)]="tool.clearance"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.clearance.invalid }" />
+                        <div *ngIf="submitted && toolform.clearance.invalid" class="invalid-error">
+                            <div *ngIf="toolform.clearance.errors.required">Clearance is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 edit-right-d">
+                        <label class="edit-toollabel">Cost</label>
+                        <input formControlName="cost" class="edit-toolname form-control input-textbox" name="cost"
+                            type="text" [(ngModel)]="tool.price"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.cost.invalid }" />
+                        <div *ngIf="submitted && toolform.cost.invalid" class="invalid-error">
+                            <div *ngIf="toolform.cost.errors.required">Cost is required</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 edit-left-d">
+                        <label class="edit-toollabel">Subscription</label>
+                        <input formControlName="subscription" class="edit-toolname form-control input-textbox"
+                            name="subscription" type="text" [(ngModel)]="tool.subscription"
+                            [ngClass]="{ 'is-invalid': submitted && toolform.subscription.invalid }" />
+                        <div *ngIf="submitted && toolform.subscription.invalid" class="invalid-error">
+                            <div *ngIf="toolform.subscription.errors.required">Subscription is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 edit-right-d">
+                        <label class="edit-toollabel">Url</label>
+                        <input class="edit-toolname form-control input-textbox" name="url" type="text"
+                            [(ngModel)]="tool.url" formControlName="url" placeholder="" />
+                        <div *ngIf="submitted && toolform.url.invalid" class="invalid-error">
+                            <div *ngIf="toolform.url?.errors?.pattern">Enter valid url (eg: https://www.google.com)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 edit-left-d">
+                    <label class="edit-toollabel">Tool Description</label>
+                    <!-- <textarea rows="6 " formControlName="description" name="description" class="edit-toolname"
+                        [(ngModel)]="tool.long_description"
+                        [ngClass]="{ 'is-invalid': submitted && toolform.description.invalid }">
+              </textarea> -->
+                    <ckeditor [config]="config" [(ngModel)]="tool.long_description" name="description"
+                        formControlName="description" placeholder=""></ckeditor>
+                    <div *ngIf="submitted && toolform.description.invalid" class="invalid-error">
+                        <div *ngIf="toolform.description.errors.required">Description is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6 edit-right-d">
+                    <label class="edit-toollabel">PDF</label>
+                    <div class="row">
+                        <a *ngIf="tool.pdf" href="{{tool.pdf}}" target="_blank"> <img src="../../assets/images/pdf.png"
+                                class="logo-pdf" /></a>
+                        <input formControlName="pdf" id="file" type="file" class="form-control input-file pdf-form"
+                            #PdffileInput (change)="onPdfFileChange($event)" accept=".pdf" />
+                    </div>
+                    <div *ngIf="submitted && tool.pdf.invalid" class="invalid-error">
+                        <div *ngIf="tool.pdf?.errors?.required">Enter valid pdf</div>
+                    </div>
+                </div>
+
+                <div class="form-group col-md-6 edit-right-d">
+                    <label class="edit-toollabel new-edit-l col-md-12">Choose Images</label>
+                    <div class=" col-md-12 att-img">
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_1" id="file1" type="file"
+                                class="form-control input-file" #fileInput (change)="onFileChange($event)"
+                                accept=".png, .jpg, .jpeg" />
+
+                            <!--  <div *ngIf="submitted && tool.place_image.invalid" class="invalid-error">
+                        <div *ngIf="tool.place_image.errors.required">File is required.</div>
+                        </div> -->
+                            <img for="file1" [src]="imageSrc" *ngIf="imageSrc" class="edit-crunchtoolimg1">
+                            <span *ngIf="imageSrc" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage()">remove</span>
+                        </div>
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_2" id="file_2" type="file"
+                                class="form-control input-file" #fileInput2 (change)="onFileChange2($event)"
+                                accept=".png, .jpg, .jpeg" />
+                            <img [src]="imageSrc2" *ngIf="imageSrc2" class="edit-crunchtoolimg1">
+                            <!--  <div *ngIf="submitted && tool.place_image.invalid" class="invalid-error">
+                            <div *ngIf="tool.place_image.errors.required">File is required.</div>
+                            </div> -->
+                            <span *ngIf="imageSrc2" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage2()">remove</span>
+                        </div>
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_3" id="file3" type="file"
+                                class="form-control input-file" #fileInput3 (change)="onFileChange3($event)"
+                                accept=".png, .jpg, .jpeg" />
+                            <img [src]="imageSrc3" *ngIf="imageSrc3" class="edit-crunchtoolimg1">
+                            <span *ngIf="imageSrc3" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage3()">remove</span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group col-md-12 edittool-buttons">
+                    <button [routerLink]="['/admin/tool-details',edit_id]" class="edit-cancel">Cancel</button>
+                    <button class="edit-save">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

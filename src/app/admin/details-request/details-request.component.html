@@ -1,0 +1,95 @@
+<p-toast position="bottom-right" key="status"></p-toast>
+<p-dialog [(visible)]="displayModalAccept" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+  [resizable]="false" (onHide)="redirect()">
+  <p class="p-m-0">Your User is now approved</p>
+  <p-button icon="pi pi-check" (click)="displayModalAccept=false" label="Ok" styleClass="p-button-text"></p-button>
+
+</p-dialog>
+<p-dialog [(visible)]="displayModalReject" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+  [resizable]="false" (onHide)="redirect()">
+  <p class="p-m-0">Your User is Rejected</p>
+  <p-button icon="pi pi-check" (click)="displayModalReject=false" label="Ok" styleClass="p-button-text"></p-button>
+
+</p-dialog>
+<div class="container-fluid bg purchase-summary-main">
+  <app-admin-header></app-admin-header>
+  <div class="container-fluid box-crunch">
+    <div class="crunch-box-bar">
+      <div class="crunch-head"> <a (click)="cgxService.goBack()"><i class="fa fa-long-arrow-left"
+            aria-hidden="true"></i><span class="details-req">Details Request</span></a> </div>
+      <div class="returncrunch-right">
+        <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+          Management</span>
+        <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+          Tools</span>
+      </div>
+    </div>
+  </div>
+  <h5 class="detailrequest-head">Account Information</h5>
+  <!-- <p-button (click)="showModalDialog()" icon="pi pi-external-link" label="Show"></p-button> -->
+
+  <div class="container-fluid details-request">
+    <div class="admin-userdetails row">
+      <div class="col-3 user-info">
+        <div class="user-details">First Name </div>
+        <div class="user-name">{{user?.first_name}}</div>
+      </div>
+      <div class="col-3 user-info">
+        <div class="user-details">Last Name</div>
+        <div class="user-name">{{user?.last_name}}</div>
+      </div>
+      <div class="col-3 user-info">
+        <div class="user-details"> Email Id </div>
+        <div class="user-name">{{user?.email}}</div>
+      </div>
+
+      <div class="col-3 user-info">
+        <div class="user-details">Institution </div>
+        <div class="bottom-user-name">{{user?.institution}}</div>
+      </div>
+      <div class="admin-requests" *ngIf="user?.status===0">
+        <input type="button" class="accecptrequest" (click)="acceptUser(user.id,1)" value="Accept Request">
+        <input type="button" class="rejectrequest" (click)="acceptUser(user.id,2)" value="Reject Request">
+      </div>
+    </div>
+  </div>
+  <!-- <h5 class="detailrequest-head1" *ngIf="order?.length>0">Order Details</h5>
+  <div class="container-fluid order-request" *ngIf="order?.length>0">
+    <div class="admin-orderdetails row">
+      <div class="col-3">
+        <div class="user-details">App Name </div>
+
+      </div>
+      <div class="col-3">
+        <div class="user-details">Amount</div>
+
+      </div>
+      <div class="col-3">
+        <div class="user-details"> Date Paid </div>
+
+      </div>
+
+      <div class="col-3">
+        <div class="user-details">Download Invoice </div>
+
+      </div>
+    </div>
+    <div class="admin-ordervalues row" *ngFor="let list of order">
+      <div class="col-3">
+        <div class="order-user-name">{{list.tool_name}}</div>
+      </div>
+      <div class="col-3">
+        <div class="order-user-name">{{list.price | currency :'USD':'symbol':'3.0'}}</div>
+      </div>
+      <div class="col-3">
+        <div class="order-user-name">{{list.order_date | date: 'dd/MM/yyyy'}}</div>
+      </div>
+      <div class="col-3">
+        <div class="order-user-name"> <a target="__blank"
+            href="https://cgxapi.mobileprogramming.net/pdf/invoice{{list.order_id}}.pdf">View Invoice</a></div>
+      </div>
+    </div>
+
+  </div> -->
+  <!--  <button type="button" class="orderdetailsbutton">Next</button> -->
+</div>

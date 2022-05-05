@@ -1,0 +1,57 @@
+<p-toast position="bottom-right" key="loginKey"></p-toast>
+<div class="container-fluid">
+  <div class="bg-image">
+    <div class="">
+      <div class="wrapper login-wrapper">
+        <div class="box box-login">
+          <div class="topbar">
+            <img src="../../assets/images/logo.png" class="logo logo-login" />
+          </div>
+          <form [formGroup]="loginFrm" (ngSubmit)="login()" class="signin-form">
+            <div class="form-box form-box-login">
+              <h1 class="login-h1">Sign In To CGX Flowpoint</h1>
+              <div class="form-group">
+                <label class="signinemail">Email Address</label>
+                <input type="email" class="form-control noFocus" id="email" 
+                  formControlName="email" required [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                  <div *ngIf="f.email.errors.required">Email is required</div>
+                </div>
+              </div>
+              <div class="form-group inner-addon">
+                <label class="signinpass">Password</label>
+                <input name="password" [type]="showPassword ? 'text' : 'password'"
+                  class="form-control pwd-control signinpassword input-field-r-pad"
+                  formControlName="password">
+                <div>
+                  <i alt="show" class="eye-show" (click)="showPassword = !showPassword"
+                    [class.hide]="!showPassword"></i>
+
+                  <i alt="hide" class="eye-hide" (click)="showPassword = !showPassword" [class.hide]="showPassword"></i>
+                </div>
+                <div *ngIf="f.password.touched && f.password.invalid" class="invalid-error">
+                  <div *ngIf="f.password.errors && f.password.errors.required">Password is required.</div>
+                  <div *ngIf="f.password.errors && f.password.errors.minlength">Password must be at least 5 characters
+                  </div>
+                </div>
+              </div>
+              <!--end password-->
+              <button class="btn button-blue text-white" type="submit"> Enter</button>
+            </div>
+          </form>
+        </div>
+        <!--end Form box-->
+      </div>
+      <!--end wrapper-->
+    </div>
+    <!--end container-->
+  </div>
+  <!--end bg image-->
+</div>
+<!--end container-fluid-->
+
+<div *ngIf="blocked_Login_Wait">
+  <div class="loader" id="loaderSelection" role="dialog">
+    <img src="assets/images/loader.gif" alt="Loader">
+  </div>
+</div>

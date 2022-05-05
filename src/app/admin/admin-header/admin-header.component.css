@@ -1,0 +1,265 @@
+.bg {
+    padding-top: 80px;
+  }
+  .navbar-light {
+    padding-left: 140px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 129px;
+  }
+  .navbar-light .navbar-brand {
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  #navbarCollapse {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  #navbarCollapse .navbar-nav {
+    height: 26.7px;
+  }
+  .profile-name-top {
+    margin-right: 7.25px;
+    color: rgba(0, 0, 0, 0.1);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 8px;
+  }
+  .user-icon-li i {
+    margin-top: 10px;
+    margin-right: 7.25px;
+  }
+  .box-crunch {
+    height: auto !important;
+  }
+  .crunch-box-bar .crunch-head {
+    color: #fefefe;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 7.3%;
+    padding-top: 9px;
+  }
+  .crunch-box-bar .fa {
+    color: #fefefe;
+  }
+  .crunch-head span {
+    margin-left: 12px;
+    color: #fefefe;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .crunch-box-bar .returncrunch-right {
+    color: #fefefe;
+    font-size: 16px;
+    margin-right: 2.2%;
+    margin-top: 8px;
+    font-family: HelveticaNeue;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fefefe;
+  }
+  .management-label {
+    color: #fff;
+    margin-right: 20px;
+    opacity: 0.5;
+  }
+  .admin-crunch {
+    border-left: 1px solid #ffffff;
+    color: #fefefe;
+    padding-left: 13px;
+  }
+  .add-tools {
+    width: 85.6%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 67px;
+    clear: both;
+    overflow: auto;
+    padding-top: 53px;
+    padding-left: 5.3%;
+    padding-right: 150px;
+  }
+  .add-toolname {
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    font-size: 18px;
+    padding: 5px 7px 7px 21px;
+    margin-top: 18px;
+    margin-bottom: 22px;
+    color: #000;
+  }
+  .add-toollabel {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+  }
+  textarea {
+    width: 100%;
+    font-size: 20px;
+  }
+  .att-img {
+    margin-top: 18px;
+    padding-left: 0px;
+  }
+  .add-crunchtoolimg1,
+  .add-crunchtoolimg2,
+  .add-crunchtoolimg3 {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.04);
+    padding: 21px 46px 44px;
+    margin-right: 22px;
+    float: right;
+  }
+  .addtool-buttons {
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 51px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+  }
+  .edit-cancel {
+    margin: 0 31px 0 0;
+    padding: 14px 112px;
+    border-radius: 50px;
+    border: solid 1px #4b8693;
+    background-color: #fff;
+    font-size:18px;
+  }
+  .edit-save {
+    padding: 14px 112px;
+    border-radius: 50px;
+    background-color: #1e76ac;
+    border: solid 1px #1e76ac;
+    color: #fff;
+    font-size:22px;
+  }
+  .add-left-d{
+      padding-left: 0px;
+      padding-right: 53px;
+      float: left;
+    }
+    .add-right-d{
+      padding-left: 53px;
+      padding-right: 0px;
+      float: left;
+      padding-left: 0px;
+    }
+    .addcrunchimages{
+      padding-left: 0px;
+      float: left;
+    }
+    .imgModalimgs{
+      width: 100%;
+      height: 150px;
+    }
+    .addtool-invalid-error{
+      position: relative;
+      padding-top: 32px;
+    }
+    .admin-user{
+      padding-top:10px;
+    }
+    /* #navbarDropdown {
+      padding-top: 5px;
+      padding-bottom: 0px;
+      margin-left: 4px;
+    } */
+    .logo-crunch {
+      width: 54px;
+      padding: 0px 0 0px 0;
+      height: 54px;
+  }
+  .user-profile-icon{
+    margin-top: 7px;
+  }
+  @media (max-width: 1300px) {
+    .add-toolname {
+      width: auto;
+    }
+    .edit-right-d {
+      padding-left: 0px;
+    }
+    .edit-cancel {
+      margin-bottom: 10px;
+    }
+    .add-crunchtoolimg1,
+    .add-crunchtoolimg2 {
+      margin-bottom: 10px;
+    }
+    /* add-right-d{
+      float: left;
+      padding-left: 0px;
+    } */
+    .navbar-light {
+      padding-left: 67px !important;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-right: 59px!important;
+    }
+    .add-crunchtoolimg1,
+    .add-crunchtoolimg2, .add-crunchtoolimg3 {
+     float:left;
+    }
+    .logo-crunch {
+      width: 54px;
+      padding: 0px 0 0px 0;
+      height: 54px;
+  }
+  }
+  @media (max-width: 576px) { 
+    .add-right-d{
+      float: left;
+      padding-left: 0px;
+    }
+  }
+  @media (max-width: 1280px) {
+
+  .logo-crunch {
+    width: 34px;
+    padding: 0px 0 0px 0;
+    height: 35px;
+}
+.navbar-light {
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+.bg {
+  padding-top: 56px !important;
+}
+  }
+  
+@media (max-width: 580px) {
+  .navDown{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0px 15px;
+  }
+  .dropdown-menu-right{
+    position: absolute;
+  }
+  .dropdown-toggle{
+    padding-left: 5px;
+  }
+  /* .navbar-nav {
+    width: 100%;
+  }
+  .nav-link{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .navDown{}
+  .nav-item{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  } */
+}

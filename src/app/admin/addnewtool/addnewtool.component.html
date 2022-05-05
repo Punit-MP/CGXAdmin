@@ -1,0 +1,187 @@
+<p-toast position="bottom-right" key="invalidToolList"></p-toast>
+<div class="container-fluid bg purchase-summary-main">
+    <app-admin-header></app-admin-header>
+    <div class="container-fluid box-crunch">
+        <div class="crunch-box-bar">
+
+            <div class="crunch-head"> <a (click)="cgxService.goBack()"><i class="fa fa-long-arrow-left"
+                        aria-hidden="true"></i><span class="addtool-head">Add Tools Information</span></a> </div>
+            <div class="returncrunch-right">
+                <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+                    Management</span>
+                <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+                    Tools</span>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="addToolform" (ngSubmit)="onSubmit()">
+        <div class="add-tools">
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel">Tool Name</label>
+                    <input class="add-toolname form-control input-textbox" name="toolName" type="text"
+                        formControlName="toolName" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.toolName.invalid }" [(ngModel)]="toolName" />
+                    <div *ngIf="submitted && tool.toolName.invalid" class="invalid-error">
+                        <div *ngIf="tool.toolName.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">Version</label>
+                    <input class="add-toolname form-control input-textbox" name="version" type="text"
+                        formControlName="version" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.version.invalid }" />
+                    <div *ngIf="submitted && tool.version.invalid" class="invalid-error">
+                        <div *ngIf="tool.version.errors.required">Version is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel">Author</label>
+                    <input class="add-toolname form-control input-textbox" name="creator" type="text"
+                        formControlName="creator" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.creator.invalid }" />
+                    <div *ngIf="submitted && tool.creator.invalid" class="invalid-error">
+                        <div *ngIf="tool.creator.errors.required">Author is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">Headset</label>
+                    <input class="add-toolname form-control input-textbox" name="device" type="text"
+                        formControlName="device" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.device.invalid }" />
+                    <div *ngIf="submitted && tool.device.invalid" class="invalid-error">
+                        <div *ngIf="tool.device.errors.required">Headset is required</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel" for="edit-tool">Term</label>
+                    <input class="add-toolname form-control input-textbox" name="term" type="text"
+                        formControlName="term" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.term.invalid }" />
+                    <div *ngIf="submitted && tool.term.invalid" class="invalid-error">
+                        <div *ngIf="tool.term.errors.required">Term is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">Format</label>
+                    <input class="add-toolname form-control input-textbox" name="format" type="text"
+                        formControlName="format" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.format.invalid }" />
+                    <div *ngIf="submitted && tool.format.invalid" class="invalid-error">
+                        <div *ngIf="tool.format.errors.required">Format is required</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel">Clearance</label>
+                    <input class="add-toolname form-control input-textbox" name="clearance" type="text"
+                        formControlName="clearance" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.clearance.invalid }" />
+                    <div *ngIf="submitted && tool.clearance.invalid" class="invalid-error">
+                        <div *ngIf="tool.clearance.errors.required">Clearance is required</div>
+                    </div>
+
+                </div>
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">Cost</label>
+                    <input class="add-toolname form-control input-textbox" name="cost" type="text" min="2500"
+                        formControlName="cost" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.cost.invalid }" />
+                    <div *ngIf="submitted && tool.cost.invalid" class="invalid-error">
+                        <div *ngIf="tool.cost.errors.required">Price is required</div>
+                        <div *ngIf="tool.cost.errors.pattern">Only numbers allowed</div>
+                        <div *ngIf="tool.cost.errors.min">Min value is 2000</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel">Subscription</label>
+                    <input class="add-toolname form-control input-textbox" name="subscription" type="text"
+                        formControlName="subscription" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.cost.invalid }" />
+                    <div *ngIf="submitted && tool.subscription.invalid" class="invalid-error">
+                        <div *ngIf="tool.subscription.errors.required">Subscription is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">Url</label>
+                    <input class="add-toolname form-control input-textbox" name="url" type="text" formControlName="url"
+                        placeholder="" />
+                    <div *ngIf="submitted && tool.url.invalid" class="invalid-error">
+                        <div *ngIf="tool.url?.errors?.pattern">Enter valid url (eg: https://www.google.com)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 add-left-d">
+                    <label class="add-toollabel">Tool Description</label>
+                    <!-- <textarea rows="6" class="tooldescription-textarea add-toolname" name="description"
+                        formControlName="description" placeholder=""
+                        [ngClass]="{ 'is-invalid': submitted && tool.description.invalid }"></textarea> -->
+                    <ckeditor [config]="config" (ngModel)="description" name="description" formControlName="description"
+                        placeholder=""></ckeditor>
+                    <div *ngIf="submitted && tool.description.invalid" class="invalid-error">
+                        <div *ngIf="tool.description.errors.required">Description is required</div>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                <div class="form-group col-md-6 add-right-d">
+                    <label class="add-toollabel">PDF</label>
+                    <input formControlName="pdf" id="file" type="file" class="form-control input-file-pdf" #PdffileInput
+                        (change)="onPdfFileChange($event)" accept="application/pdf" />
+                    <div *ngIf="submitted && tool.pdf.invalid" class="invalid-error">
+                        <div *ngIf="tool.pdf?.errors?.required">Enter valid pdf</div>
+                    </div>
+                    <!-- </div> -->
+
+                    <!-- <div class="form-group col-md-6 add-right-d add-image"> -->
+                    <label class="add-toollabel new-edit-l col-md-12">Choose Images</label>
+                    <div class=" col-md-12 att-img ">
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_1" id="file" type="file" class="form-control input-file"
+                                #fileInput (change)="onFileChange($event)" accept=".png, .jpg, .jpeg" />
+                            <img [src]="imageSrc" *ngIf="imageSrc" class="imgModalimgs">
+                            <span *ngIf="imageFlag" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage()">remove</span>
+                        </div>
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_2" id="file_2" type="file"
+                                class="form-control input-file" #fileInput2 (change)="onFileChange2($event)"
+                                accept=".png, .jpg, .jpeg" />
+                            <img [src]="imageSrc2" *ngIf="imageSrc2" class="imgModalimgs">
+                            <span *ngIf="imageFlag2" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage2()">remove</span>
+                        </div>
+                        <div class="col-md-4 addcrunchimages">
+                            <input formControlName="place_image_3" id="file3" type="file"
+                                class="form-control input-file" #fileInput3 (change)="onFileChange3($event)"
+                                accept=".png, .jpg, .jpeg" />
+                            <img [src]="imageSrc3" *ngIf="imageSrc3" class="imgModalimgs">
+                            <span *ngIf="imageFlag3" class="text-danger"
+                                style="float: right;cursor: pointer;text-decoration: underline;"
+                                (click)="removeImage3()">remove</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-12 addtool-buttons add-right-d">
+                <input type="button" class="edit-cancel" (click)="resetform()" name="cancel" value="Cancel">
+                <button class="edit-save">Save</button>
+            </div>
+            <!-- <div style="width: 600px;" [innerHTML]="description"></div> -->
+        </div>
+    </form>
+</div>

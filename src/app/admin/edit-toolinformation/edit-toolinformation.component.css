@@ -1,0 +1,283 @@
+.bg{
+  padding-top:80px;
+}
+.row{
+  margin: 0;
+}
+::ng-deep .ui-toast-message-content{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+.navbar-light {
+  padding-left: 2.1%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 2%;
+}
+.navbar-light .navbar-brand{
+  padding-left: 0px !important;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#navbarCollapse{
+padding-left: 0px;
+padding-right: 0px;
+}
+textarea{
+    width: 100%;
+    font-size: 20px;
+}
+#navbarCollapse .navbar-nav{
+  height: 26.7px;
+}
+.profile-name-top {
+  margin-right: 7.25px;
+  border-left: 1px solid #000000;
+}
+.input-file{
+  border:none;  
+ }   
+.edittool-buttons{
+    text-align: center;
+    padding-top:46px;
+    padding-bottom:51px;
+    font-size: 18px;
+    font-weight: bold;
+    float: left;
+}
+.att-img{
+    margin-top: 18px;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+.new-edit-l{
+  padding-left: 0px;
+}
+    .user-icon-li i{
+      margin-top: 10px;
+      margin-right: 7.25px
+    }
+    .box-crunch{
+      height: auto !important;
+  }
+  .crunch-box-bar .crunch-head {
+      color:#fefefe;  
+      font-size: 28px;
+      font-weight: bold;
+      margin-left: 140px;
+      padding-top: 9px;
+      /* padding-left:156px;
+      padding-top: 7px; */
+    }
+    .crunch-box-bar .fa{
+      color: #fefefe;
+  }
+  .crunch-head span {
+      margin-left: 12px;
+      color: #fefefe;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  .crunch-box-bar  .returncrunch-right{
+      color:#fefefe; 
+      font-size: 16px;
+      margin-right:137px ;
+      margin-top: 8px;
+      font-family: HelveticaNeue;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fefefe;
+    }
+    .management-label{
+      color: #fff;
+      margin-right: 20px;
+      opacity: 0.5;
+  }
+    .admin-crunch{
+      border-left: 1px solid #FFFFFF;
+      color: #fefefe;
+      padding-left: 13px;
+  }
+  .edit-left-d{
+    padding-left: 0px;
+    padding-right: 53px;
+    float: left;
+  }
+  .edit-right-d{
+    padding-left: 53px;
+    padding-right: 0px;
+    float: left;
+
+  }
+  .profile-name-top{
+    color:rgba(0, 0, 0, 0.1);
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 13px;
+  }
+  .edit-tools{
+      width: 85.6%;
+      margin: 0 auto; 
+      background-color: #ffffff;
+      border-radius: 6px;
+      box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+      margin-top: 67px;
+      margin-bottom: 67px;
+      clear: both;
+      overflow: auto;
+      padding: 53px 120px 53px 120px;
+  }
+
+  .edit-toolname{
+      border: solid 1px rgba(0, 0, 0, 0.25);
+      font-size: 18px;
+      padding: 5px 7px 7px 21px;
+      margin-top:18px;
+      margin-bottom:22px;
+      color: #000;
+  }
+  .edit-toollabel{
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+  }
+  .addcrunchimages{
+    padding-left: 0px;
+    float: left;
+  }
+  /* .choose-images{
+      clear: both;
+      overflow: auto;
+  } */
+  .edit-toolvalue{
+      border: solid 1px rgba(0, 0, 0, 0.25);
+      font-size: 18px;
+      padding: 5px 7px 7px 21px;
+      margin-top:18px;
+      margin-bottom:22px;
+      color: #000;
+      height: 181px;
+  }
+  .edit-cancel{
+      margin: 0 31px 0 0;
+      padding: 14px 112px;
+      border-radius: 50px;
+      border: solid 1px #4b8693;
+      background-color: #fff;
+      font-size:22px;
+      color: #2C2C2C;
+  }
+  .edit-save{
+      padding: 14px 112px;
+      border-radius: 50px;
+      background-color: #1e76ac;
+      border: solid 1px #1e76ac;
+      color: #fff;
+      font-size:22px;
+  }
+  .edit-crunchtoolimg1, .edit-crunchtoolimg2, .edit-crunchtoolimg3{
+      box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.04);
+      width:100%;
+      /* width: 200px; */
+      /* height: 170px; */
+  }
+  .editcrunchimages{
+    float: right;
+    padding-left: 0px;
+  }
+  .admin-user{
+    padding-top:10px;
+  }
+  .logo-pdf{
+    width: 35px;
+    height: 35px;
+    margin-left: 16px;
+  }
+  .pdf-form{
+    width: 80%;
+  }
+  @media (max-width: 1440px) { 
+    /* .edit-toolname{
+        width: auto !important;
+    } */
+    
+    .edit-right-d{
+      padding-left: 0px;
+    }
+    .edit-crunchtoolimg1, .edit-crunchtoolimg2{
+      margin-bottom:10px;
+    }
+    .edit-crunchtoolimg1, .edit-crunchtoolimg2, .edit-crunchtoolimg3{
+      float:left;
+    }
+  }
+  @media (max-width: 1300px)  {
+    .crunch-head span{
+      font-size: 18px;
+    }
+    .edit-head{
+      display: flex;
+      margin-top: -33px;
+      margin-left: 32px !important;
+    }
+    /* .edit-icon{
+      padding-top:5px;
+    } */
+    .crunch-box-bar .crunch-head{
+      padding-top: 0px;
+      padding-left: 67px;
+      margin-left: 0px;
+      margin-bottom:10px;
+    }
+    .crunch-box-bar  .returncrunch-right{
+      padding-right: 67px;
+      margin: 0px;
+    }
+    .management-label, .admin-crunch{
+      font-size: 14px;
+    }
+    .edit-tools{
+      width:89.4%;
+      padding: 37px 47px 37px 47px;
+    }
+    .edit-toollabel{
+      font-size: 18px;
+    }
+    .edit-toolname{
+      font-size: 14px;
+    }
+    .edit-cancel{
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    .edit-save{
+      font-size: 16px;  
+    }
+    .edit-crunchtoolimg1, .edit-crunchtoolimg2, .edit-crunchtoolimg3{
+     /* width: 144px;
+     height: 131px; */
+     padding:0px;
+     margin:0px;
+    }
+    .bg {
+      padding-top: 56px !important;
+    }
+    .crunch-box-bar {
+      min-height: 56px;
+    }
+  }
+  @media (min-width:320px) and (max-width:767px) {
+    .edit-left-d{
+      padding-right: 0px;
+    }
+    .addcrunchimages{
+      width: 33%;
+    }
+  }

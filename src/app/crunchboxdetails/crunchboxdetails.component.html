@@ -1,0 +1,78 @@
+<div class="container-fluid bg purchase-summary-main">
+  <app-header></app-header>
+  <div class="container-fluid">
+    <div class="crunch-box-bar">
+      <div class="crunch-head"> CrunchBox Tools Description</div>
+    </div>
+    <div class="crunch-right-head">{{crunchdetails.tool_name}}</div>
+    <hr class="borderCss">
+    <div class="crunch-item-bg">
+      <div class="crunch-left">
+        <div class="crunch-right-text" [innerHTML]="crunchdetails.long_description"></div>
+        <!-- <div class="crunch-right-text">{{crunchdetails.long_description}}</div> -->
+      </div>
+      <div class="crunch-right prod_info">
+        <div [ngClass]="{ 'buynowhide': visibility=='1'}">
+          <!-- <p   class="crunch-item-price">{{crunchdetails.price | currency :'USD':'symbol':'3.0' }}<span class="pl-3"><a [routerLink]="['/purchase-summary']" (click)= cartadded(crunchdetails)  class="btn button-blue">Buy Now</a></span></p></div> -->
+          <p class="crunch-item-price"><a [routerLink]="['/purchase-summary']" (click)=cartadded(crunchdetails)
+              class="btn button-blue">Purchase</a></p>
+        </div>
+        <div class="crunchboxdetails-info">
+          <div class="row ">
+            <!-- <p class="tool-information">Format </p> <span class="pl-3 tool-information-det">Upload files to CrunchBox server. Returns PDF report.</span> -->
+            <div class="tool-information">Author</div>
+            <div class="tool-information-det">{{crunchdetails.creator}}</div>
+          </div>
+          <div class="row ">
+            <!-- <p class="tool-information">Format </p> <span class="pl-3 tool-information-det">Upload files to CrunchBox server. Returns PDF report.</span> -->
+            <div class="tool-information">Headset</div>
+            <div class="tool-information-det">{{crunchdetails.description_name}}</div>
+          </div>
+          <div class="row ">
+            <!-- <p class="tool-information">Format </p> <span class="pl-3 tool-information-det">Upload files to CrunchBox server. Returns PDF report.</span> -->
+            <div class="tool-information">Format</div>
+            <div class="tool-information-det">{{crunchdetails.format}}</div>
+          </div>
+          <div class="row">
+            <div class="tool-information">Clearance</div>
+            <div class="tool-information-det">{{crunchdetails.clearance}}</div>
+
+          </div>
+          <div class="row">
+            <div class="tool-information">Version</div>
+            <div class="tool-information-det">{{crunchdetails.version}}</div>
+
+          </div>
+          <div class="row">
+            <div class="tool-information">Subscription</div>
+            <div class="tool-information-det">{{crunchdetails.subscription}}</div>
+
+          </div>
+          <div class="row">
+            <div class="tool-information">Pricing</div>
+            <div class="tool-information-det">{{crunchdetails.price}}</div>
+          </div>
+          <div class="row">
+            <div class="tool-information">Term</div>
+            <div class="tool-information-det">{{crunchdetails.term}}</div>
+          </div>
+        </div>
+        <div class="infoLink">
+          <a *ngIf="crunchdetails.url?.length > 0 && crunchdetails.url != 'null'" class="crunchdet-click"
+            href='{{crunchdetails.url}}' target="_blank">Click for more details including associated publications, 
+            MatLab code information, and the author's contact 
+            information.</a>
+        </div>
+        <img src="{{crunchdetails.image1}}" class="img-fluid">
+        <div>
+          <img src="{{crunchdetails.image2}}" class="tool-det-img">
+          <img src="{{crunchdetails.image3}}" class="tool-det-img1">
+          <div class="click-info"> 
+          <a *ngIf="crunchdetails.pdf" href="{{crunchdetails.pdf}}" target="_blank" class="purchasereport">Click for a sample report.</a> 
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

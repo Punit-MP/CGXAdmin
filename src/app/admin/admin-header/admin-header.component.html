@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light navbar-expand-sm bg-white fixed-top">
+    <a target="_blank" href="http://www.CGXSYSTEMS.com/" class="navbar-brand">
+        <img src="../../assets/images/logo.png" class="logo-crunch" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-expanded="false" aria-controls="navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse profile-details">
+        <ul class="navbar-nav ml-auto">
+            <div class="row navDown">
+                <a class="nav-link profile-name-top">{{currentUser}}</a>
+                <div class="nav-item dropdown user-icon-li">
+                    <img src="../../assets/images/user-icon.png" class="nav-item nav-linkadmin-user user-profile-icon" />
+                    <img class="pt-3 nav-item nav-link dropdown-toggle" src="../../assets/images/user-arrowicon.png"
+                        id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false" />
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" [routerLink]="['/admin/changepassword']">Change Password</a>
+                        <a class="dropdown-item" (click)="signout()">Signout</a>
+                    </div>
+                </div>
+            </div>
+        </ul>
+    </div>
+</nav>

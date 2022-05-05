@@ -1,0 +1,76 @@
+<p-toast position="bottom-right" key="resetKey"></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" #cd>
+    <p-footer>
+        <button type="button" pButton class="yesbtn" icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+        <button type="button" class="nobtn" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+    </p-footer>
+</p-confirmDialog>
+<div class="container-fluid bg purchase-summary-main">
+    <app-admin-header></app-admin-header>
+    <div class="container-fluid box-crunch">
+        <div class="crunch-box-bar">
+            <div class="crunch-head"><a (click)="cgxService.goBack()"> <i class="fa fa-long-arrow-left"
+                        aria-hidden="true"></i><span class="admin-toolinfo">Tool Information</span></a> </div>
+            <div class="returncrunch-right">
+                <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+                    Management</span>
+                <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+                    Tools</span>
+            </div>
+        </div>
+    </div>
+    <div class="admincrunch-item-bg">
+        <div class="crunch-left ">
+
+            <img src="{{tool?.image1}}" class="admin-crunchtoolimg1">
+
+            <div class="crunchtool-images col-md-12">
+                <img src="{{tool?.image2}}" class="admin-crunchtoolimg2 admin-crunchtoolimg2 col-md-5 col-md-offset-2">
+                <img src="{{tool?.image3}}" class="admin-crunchtoolimg3 col-md-5">
+            </div>
+        </div>
+        <div class="crunch-right" *ngIf="tool">
+            <div class="crunch-right-head col-6">{{tool.tool_name}}</div>
+            <div class="col-6 tooldetail-buttons">
+                <button type="button" class="edit-button" [routerLink]="['/admin/edit-tool',tool.id]">Edit <span><i
+                            class="fa fa-edit"></i> </span></button>
+                <button type="button" class="delete-button" (click)="removeTool(tool.id);">Delete <span><i
+                            class="fa fa-trash-o"></i> </span></button>
+            </div>
+            <div class="crunch-toolinfo-details">
+                <div class="col-5 crunch-creator">{{tool.creator}}</div>
+                <div class="col-7 crunch-device">{{tool.description_name}}</div>
+            </div>
+
+            <div class="admin-crunchtext " [innerHTML]="tool.long_description"></div>
+            <!-- <div class="admin-crunchtext ">{{tool.long_description}}</div> -->
+            <a *ngIf="tool.url?.length > 0 && tool.url != 'null'" class="crunchdet-click" href='{{tool.url}}'
+                target="_blank">Click For More Information</a>
+            <div class="crunchboxdetails-info">
+                <div class="row ">
+                    <!-- <p class="tool-information">Format </p> <span class="pl-3 tool-information-det">Upload files to CrunchBox server. Returns PDF report.</span> -->
+                    <div class="col-3 tool-information" *ngIf="tool.format">Format</div>
+                    <div class="col-9 tool-information-det" *ngIf="tool.format">{{tool.format}}</div>
+                </div>
+                <div class="row ">
+                    <div class="col-3 tool-information" *ngIf="tool.clearance">Clearance</div>
+                    <div class="col-9 tool-information-det" *ngIf="tool.clearance">{{tool.clearance}}</div>
+                </div>
+                <div class="row ">
+                    <div class="col-3 tool-information" *ngIf="tool.version">Version</div>
+                    <div class="col-9 tool-information-det" *ngIf="tool.version">{{tool.version}}</div>
+                </div>
+                <div class="row ">
+                    <div class="col-3 tool-information" *ngIf="tool.subscription">Subscription</div>
+                    <div class="col-9 tool-information-det" *ngIf="tool.subscription">{{tool.subscription}}</div>
+                </div>
+                <div class="row ">
+                    <div class="col-3 tool-information price-details" *ngIf="tool.price">Price</div>
+                    <div class="col-9 tool-information-det" *ngIf="tool.price">{{tool.price | currency
+                        :'USD':'symbol':'3.0'}}</div>
+                </div>
+            </div>
+            <div class="tool-details-border1"> </div>
+        </div>
+    </div>
+</div>

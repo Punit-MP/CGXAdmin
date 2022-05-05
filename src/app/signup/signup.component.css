@@ -1,0 +1,281 @@
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /* border: 2px solid #e6e3e3; */
+  border: none;
+  border-radius: 0px;
+  color: #0d0d0d;
+  /* padding: 5px 2px; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 0px;
+  width: 100%;
+  border-bottom: 2px solid #e6e3e3;
+}
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+a {
+  color: #000;
+}
+.invalid-error1 div {
+  position: absolute;
+  display: block;
+  top: 10px;
+  left: 24px;
+  font-size: 12px;
+  color: rgb(255, 32, 32) !important;
+}
+.invalid-error2 div {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 0px;
+  font-size: 12px;
+  color: rgb(255, 32, 32) !important;
+}
+.hide {
+  display: none;
+}
+.inner-addon {
+  position: relative;
+}
+.inner-addon i,
+.inner-addon .fa {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  padding: 4px;
+  margin: 13px -14px 13px 13px;
+  z-index: 100;
+  cursor: pointer;
+}
+.fa {
+  font-size: 19px;
+  color: #4b8693;
+}
+.invalid-feedback div {
+  margin-top: 0.25rem;
+  font-size: 80%;
+  color: #dc3545;
+}
+.invalid-check{
+  margin-top: 0.25rem;
+  font-size: 80% !important;
+  color: #dc3545 !important;
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background: none !important;
+}
+.form-row {
+  margin: 0 2px 0 2px;
+}
+.accept_checkbox {
+  margin-top: 29.6px;
+  margin-bottom: 20.6px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  display: flex;
+  color: #2c2c2c;
+}
+.accept_checkbox label {
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.already_an_acc {
+  flex-grow: 0;
+  margin-top: 13.7px;
+  margin-bottom: 0px;
+  margin-left: -6px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2c2c2c;
+}
+.signup-box .input-textbox {
+  padding-bottom: 10px;
+}
+::placeholder {
+  font-size: 14px;
+  color: #696969 !important;
+  /* position:relative !important; */
+  z-index: 2222 !important;
+  padding-left: -5px !important;
+  /* right:20x !important; */
+  overflow: visible !important;
+}
+.Lname {
+  margin-left: -7px;
+}
+.Email {
+  margin-top: -1px;
+}
+.institution {
+  margin-top: -6px;
+}
+.signuppassword {
+  margin-top: -1px;
+}
+.signupconfirmpassword {
+  margin-top: -5px;
+}
+.signUp-Title {
+  font-size: 28px;
+  font-weight: bold;
+}
+/* ::ng-deep .ui-widget {
+  background-color: #FFFFFF !important;
+  color: #2c2c2c !important;
+  font-weight: bold;
+} */
+::ng-deep .ui-toast-message-content{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+::ng-deep .ui-toast-message{
+  margin: 0 !important;
+}
+::ng-deep .ui-toast .ui-toast-message-content {
+  padding-left:10px !important;
+  padding-top:2px;
+}
+@media (max-width: 576px) {
+  .invalid-error1 div {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 0px;
+    font-size: 12px;
+    color: rgb(255, 32, 32) !important;
+  }
+
+  .invalid-error2 div {
+    position: absolute;
+    display: block;
+    top: 52px;
+    right: 0px;
+    font-size: 12px;
+    color: rgb(255, 32, 32) !important;
+  }
+  .already_an_acc {
+    font-size: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .signup-box h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  .signup-placeholder {
+    font-size: 19px;
+  }
+  input[type="password"],
+  input[type="email"],
+  input[type="text"] {
+    font-size: 9px;
+  }
+  .accept_checkbox {
+    font-size: 12px;
+    margin-top: 10.9px !important;
+    margin-bottom: 20.9px !important;
+  }
+  .signupbtn {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+  }
+}
+@media (min-width: 375px) and (max-width: 767px) {
+  .signup-box {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .Lname {
+    margin-left: 0px;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px) {
+  .signup-box {
+    width: 86%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1300px) {
+  /* .signup-box {
+      width: 32.5%;
+      margin-left: 10.2%;
+    margin-bottom: 10.6%;
+    } */
+  signup-placeholder {
+    font-size: 9px;
+  }
+  .Email input,
+  .institution input,
+  .signuppassword input,
+  .signupconfirmpassword input {
+    /* height: 38px; */
+  }
+  .eye-hide,
+  .eye-show {
+    margin-top: 6px !important;
+  }
+  .signupbtn {
+    height: auto !important;
+    padding-top: 5.5px !important;
+    padding-bottom: 5.5px !important;
+  }
+  .purchase-cardnumber {
+    padding-top: 17.4px;
+  }
+  .signUp-Title {
+    font-size: 18px;
+  }
+  .accept_checkbox {
+    font-size: 12px;
+  }
+  .signupbtn {
+    font-size: 14px;
+  }
+  input[type="password"],
+  input[type="email"],
+  input[type="text"] {
+    font-size: 9px;
+  }
+}
+@media (min-width: 767px) and (max-width: 900px) {
+  .signup-box {
+    width: 43%;
+    margin-left: 10.2%;
+    margin-bottom: 10.6%;
+  }
+}
+@media (min-width: 320px) and (max-width: 374px){
+  .Lname{
+    margin-left: 0px !important;
+}
+}
+@media (min-width: 320px) and (max-width: 374px){
+  .Lname{
+    margin-left: 0px !important;
+}
+.box-reset-password {
+  width: 300px !important;
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+}
+}

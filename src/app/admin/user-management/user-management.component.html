@@ -1,0 +1,60 @@
+<p-toast position="bottom-right" key="removeKey"></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<div class="container-fluid bg purchase-summary-main">
+  <app-admin-header></app-admin-header>
+  <div class="container-fluid box-crunch">
+    <div class="crunch-box-bar">
+      <div class="crunch-head"> User Management</div>
+      <div class="returncrunch-right">
+        <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+          Management</span>
+        <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+          Tools</span>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid admin-newregistrationrequests">
+
+    <div class=" user-registration-request">
+      <div class="mr-auto new-registration">
+        <label class="col-md-6 float-left"> New Registration Requests</label>
+        <div class="col-md-6 float-right-n"><button type="button" class="btn btn-primary new-reg-request "
+            [routerLink]="['/admin/usermanagement']">New Registration Requests</button>
+          <button type="button" class="btn btn-outline-primary all-reg-request" [routerLink]="['/admin/user-list']">All
+            Registration Requests</button>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex user-registration-request2">
+      <i class="fa fa-search cr-search"></i><input class="form-control mr-sm-2 search mr-auto cr-search-input"
+        [(ngModel)]="searchKey" (ngModelChange)="filterTable($event)" type="search" placeholder="Search"
+        aria-label="Search">
+    </div>
+    <table class="table newregistration-table">
+      <thead class="thead">
+        <tr class="newregistration-head">
+          <th class="newreg-name">Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Institution </th>
+          <th class="newreg-view">View</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tool of tools | paginate: { itemsPerPage: 10, currentPage: p }">
+          <td>{{tool.first_name}} {{tool.last_name}}</td>
+          <td>{{tool.email}}</td>
+          <td>{{tool.status}}</td>
+          <td>{{tool.institution}}</td>
+          <td><a class="newreg-viewdetails" [routerLink]="['/admin/user-details', tool.id]">Details</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+    <div *ngIf="tools?.length > 0" class="allregistration-pagination">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      <!-- <jw-pagination [items]="tools" (changePage)="onChangePage($event)"></jw-pagination> -->
+    </div>
+  </div>
+
+</div>

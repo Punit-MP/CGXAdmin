@@ -1,0 +1,18 @@
+/* block-ui{
+    opacity: 65%;
+} */
+
+::ng-deep .block-ui-wrapper.block-ui-main{
+    height: 100%;
+    width: 100%;
+    margin-top: 150px;
+    background: none;
+    z-index: 30000;
+    cursor: wait;
+}
+::ng-deep .block-ui-spinner .message {
+    color: #4b8693!important;
+}
+::ng-deep .block-ui-spinner .loader {
+    background-color: #4b8693 !important;
+}

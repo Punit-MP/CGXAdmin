@@ -1,0 +1,61 @@
+<div class=" bg purchase-summary-main">
+    <app-header></app-header>
+    <div class="container-fluid box-crunch">
+        <div class="crunch-box-bar">
+        </div>
+    </div>
+    <div class="container-fluid box-crunch1">
+        <div class="All-notifications">
+            <a class="crunch-All-notification">All Notifications</a>
+        </div>
+        <div class="notification-details">
+            <div *ngFor="let notify of unread">
+                <div class="app-launched">New App Launched</div>
+
+                <div class="boxContainer row appdetails-border">
+                    <div class="boxInside app-name">
+                        {{notify.tool_name}}
+                    </div>
+                    <div class="boxInside app-launch-det">
+                        {{notify.short_description}}
+                    </div>
+                    <div class="boxInside app-date-time">
+                        {{notify.created_at| date :'E d MMM yy h:mm a'}}
+                    </div>
+                    <div class="boxInside row remove-p-flex">
+                        <div class="buttonInside ff-one">
+                            <button type="button" class=" app-button-open"
+                                [routerLink]="['/crunchboxdetails',notify.tool_id]">Open</button>
+                        </div>
+                        <div class="buttonInside ff-two">
+                            <button type="button" class="app-button-delete"
+                                (click)="removenotification(notify.notification_id)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="boxContainer row appdetails-border" *ngFor="let notifyread of read">
+                <div class="boxInside app-name">
+                    {{notifyread.tool_name}}
+                </div>
+                <div class="boxInside app-launch-det">
+                    {{notifyread.short_description}}
+                </div>
+                <div class="boxInside app-date-time">
+                    {{notifyread.created_at| date :'E d MMM yy h:mm a'}}
+                </div>
+                <div class="boxInside row remove-p-flex">
+                    <div class="buttonInside ff-one">
+                        <button type="button" class=" app-button-open"
+                            [routerLink]="['/crunchboxdetails',notifyread.tool_id]">Open</button>
+                    </div>
+                    <div class="buttonInside ff-two">
+                        <button type="button" class=" app-button-delete"
+                            (click)="removenotification(notifyread.notification_id)">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

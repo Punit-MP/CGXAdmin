@@ -1,0 +1,332 @@
+
+.bg{
+    /* background-color:#fff; */
+    padding-top:80px;
+  }
+  .navbar-light {
+    padding-left: 2.1%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 2%;
+  }
+  .navbar-light .navbar-brand{
+    padding-left: 0px !important;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #navbarCollapse{
+  padding-left: 0px;
+  padding-right: 0px;
+  }
+  #navbarCollapse .navbar-nav{
+    height: 26.7px;
+  }
+  .profile-name-top {
+    margin-right: 7.25px
+  }
+      .user-icon-li i{
+        margin-top: 10px;
+        margin-right: 7.25px
+      }
+      .box-crunch{
+        height: auto !important;
+    }
+    .crunch-box-bar .crunch-head {
+        color:#fefefe;  
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 140px;
+        /* padding-top: 9px; */
+        /* padding-left:156px;
+        padding-top: 7px; */
+      }
+      .crunch-head span{
+        margin-left: 12px;
+        color: #fefefe;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .crunch-box-bar  .returncrunch-right{
+        color:#fefefe; 
+        font-size: 16px;
+        margin-right:2.2% ;
+        /* margin-top: 8px; */
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fefefe;
+      }
+      .management-label{
+        color: #fff;
+        margin-right: 20px;
+        opacity: 0.5;
+    }
+    
+      .admin-crunch{
+        border-left: 1px solid #FFFFFF;
+        color: #fefefe;
+        padding-left: 13px;
+    }
+    .crunch-usermanagement{
+        color: #fefefe;
+        
+    }
+   
+    .admin-crunchboxtools{
+        width: 85.6%;
+        padding-bottom: 83px;
+        box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-top: 67px;
+        margin-bottom: 67px;
+        border-radius: 2px;
+         padding-left:4.8%;
+         padding-right: 6.3%;
+         padding-top:46px;
+    }
+    .search{
+        width: 34.9%;
+        border-radius: 50px;
+        height: 40px;
+    }
+    .add-tools{
+        border-radius: 50px;
+        box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+        padding:11px 14px 11px 24px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color:  #1e76ac;
+      }
+       .crunch-plus{
+        color: #fff;
+        margin: 0 4px;
+        height: 2px;
+        font-size: 14px;
+      }
+      .user-registration-request{
+          margin-bottom:33px;
+      }
+     
+      .crunchbox-header{
+        color: #fff;
+        background-color: #4b8693;
+        box-shadow: 0 4px 15px 2px rgb(0 0 0 / 10%);
+        background-color: #4b8693;
+      }
+      .crunch-tool{
+          padding-left:5.1%;
+          padding-top:12px;
+          padding-bottom:12px;
+      
+      }
+      .crunchboxtools-table{
+          overflow-y: auto;
+          /* display: flow-root; */
+      }
+      .crunchboxtools-table tr td{
+        border-top: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 20px;
+    }
+    .crunchboxtools-table tbody tr:nth-child(even){
+        background-color: #fbfbfb;
+    }
+    .crunchbox-header{
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .crunch-tool{
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .crunchtool-viewdetails{
+      color: #1e76ac;
+  }
+  .cr-search{
+    width: 8px;
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 18px;
+    font-size: 18px;
+  }
+  .cr-search-input{
+    padding-left: 47px;
+    padding-top: 8px;
+    font-size: 15px;
+  }
+  ::placeholder {
+    font-size: 20px;
+    opacity: 0.2;
+    color: #4b4b4b;
+    /* margin-left:15px; */
+  }
+  .admin-user{
+    padding-top:10px;
+  }
+    @media (min-width: 1250px) { 
+      .crunchboxtools-table tr th:first-child{
+          /* padding-left: 5.1%; */
+      }
+      .crunchboxtools-table tr td:first-child{
+          /* padding-left: 5.1%; */
+      
+      }
+      .crunchboxtools-table{
+          display: inline-table !important;
+      }
+    }
+    @media (max-width: 576px) {
+      .search{
+        width: 38.9%;
+        
+      }
+    }
+.bg{
+    /* background-color:#fff; */
+    padding-top:80px;
+  }
+  .navbar-light {
+    padding-left: 2.1%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 2%;
+  }
+  .navbar-light .navbar-brand{
+    padding-left: 0px !important;
+    height: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  #navbarCollapse{
+  padding-left: 0px;
+  padding-right: 0px;
+  }
+  #navbarCollapse .navbar-nav{
+    height: 26.7px;
+  }
+  .profile-name-top {
+    margin-right: 7.25px
+  }
+      .user-icon-li i{
+        margin-top: 10px;
+        margin-right: 7.25px
+      }
+      .box-crunch{
+        height: auto !important;
+    }
+    .crunch-box-bar .crunch-head {
+        color:#fefefe;  
+        font-size: 28px;
+        font-weight: bold;
+        margin-left: 140px;
+        /* padding-top: 9px; */
+        /* padding-left:156px;
+        padding-top: 7px; */
+      }
+      .crunch-box-bar  .returncrunch-right{
+        color:#fefefe; 
+        font-size: 16px;
+        margin-right:137px ;
+        /* margin-top: 8px; */
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fefefe;
+      }
+      .admin-crunch{
+        border-left: 1px solid #FFFFFF;
+        color: #fefefe;
+        /* opacity: 0.5; */
+    }
+    .crunch-usermanagement{
+        color: #fefefe;
+        
+
+    }
+    .search{
+        width: 34.9%;
+        border-radius: 50px;
+        height: 40px;
+    }
+    .add-tools{
+        border-radius: 50px;
+        box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+        /* width: 9.7%; */
+        padding:11px 14px 11px 24px;
+        font-size: 14px;
+        font-weight: bold;
+        background-color:  #1e76ac;
+      }
+       .crunch-plus{
+        color: #fff;
+        margin: 0 4px;
+        height: 2px;
+        font-size: 14px;
+      }
+      .user-registration-request{
+          margin-bottom:33px;
+      }
+     
+      .crunchbox-header{
+        color: #fff;
+        background-color: #4b8693;
+        
+      }
+      .crunch-tool{
+          padding-left:5.1%;
+          padding-top:12px;
+          padding-bottom:12px;
+      
+      }
+      @media (max-width: 1300px) {
+        .crunch-box-bar .crunch-head{
+          font-size:18px;
+          margin-left: 67px;
+        }
+        .management-label, .admin-crunch{
+          font-size: 14px;
+        }
+        .crunch-box-bar {
+          min-height: 56px;
+      }
+      .admin-crunchboxtools{
+        width:89.4% !important;
+        padding-right: 17px !important;
+        padding-left: 17px !important;
+      }
+      .cr-search-input{
+        font-size: 20px;
+        padding-top: 0px;
+      }
+      .search{
+        width: 52%;
+      }
+      .crunchboxtools-table tr td{
+        font-size: 18px;
+      }
+      .crunch-box-bar  .returncrunch-right{
+        margin-right: 67px;
+      }
+      .bg {
+        padding-top: 56px !important;
+      }
+      }
+      @media (max-width: 767px){
+        .col-md-3{
+            width: auto;
+        }
+      }

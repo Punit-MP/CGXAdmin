@@ -1,0 +1,50 @@
+<nav class="navbar navbar-light navbar-expand-sm fixed-top">
+  <a target="_blank" href="http://www.CGXSYSTEMS.com/" class="navbar-brand">
+    <img src="../../assets/images/logo.png" class="logo-crunch" />
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarCollapse" class="collapse navbar-collapse">
+    <div class="navbar-nav">
+      <div *ngIf="currentUser">
+        <a class="nav-link profile-name-top row">
+          <div class="header-username" style="cursor: auto;">{{currentUser}}</div>
+          <div class="nav-item dropdown user-icon-li user-icon-li-first" style="cursor: pointer;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownnew" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <!-- <i *ngIf="currentUser"class="fa fa-bell-o" aria-hidden="true"></i> -->
+              <img  *ngIf="headerunread?.length > 0" src="../../assets/images/notification-alert-2.png" class="head-notification"/>
+              <img  *ngIf="headerunread?.length == undefined || 0" src="../../assets/images/icon_Notification.png" class="head-notification" data-toggle="tooltip" data-placement="top" title="no new notification"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbarDropdownBody" aria-labelledby="navbarDropdownnew" *ngIf="headerunread.length > 0">
+              <div class="notification-header">
+                <label class="notifications">Notifications</label>
+              </div>
+              <ul class="notification-ul">
+                <li class="notification1" *ngFor="let headernotify of headerunread">
+                  <!-- <i class="fa fa-bell-o" aria-hidden="true"></i> -->
+                  <div class="notification-text">
+                    <div>{{headernotify.tool_name}}</div>
+                    <a (click)="updateNotify(headernotify)"
+                    [routerLink]="['/crunchboxdetails']" [queryParams]="{id:headernotify.tool_id}" class="notification-app">Click to see details</a>
+                    <!-- <div class="notification-date">{{headernotify.created_at| date :'E d MMM yy h:mm a'}}</div> -->
+                  </div>
+                  <img src="../../assets/images/Trash Can 1@2x.png"
+                    (click)="removenotification(headernotify.notification_id)" class="crunch-deleteicon">
+                </li>
+              </ul>
+              <!-- <a class="notification-viewall" [routerLink]="['/notifications']">View All</a> -->
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle" #cd>
+  <p-footer>
+    <button type="button" pButton class="yesbtn" icon="pi pi-check" label="Yes" (click)="cd.accept()"></button>
+      <button type="button" class="nobtn" pButton icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+  </p-footer>
+</p-confirmDialog>

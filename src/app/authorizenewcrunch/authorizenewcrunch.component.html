@@ -1,0 +1,85 @@
+<div class="bg purchase-summary-main">
+    <app-header></app-header>
+    <div class="container-fluid-new-one  box-crunch">
+        <div class="container-fluid box-crunch">
+            <div class="crunch-box-bar">
+                <div class="crunch-head">CRUNCHBOX TOOLS</div>
+
+            </div>
+        </div>
+        <div class="purchasecrunchtools">
+            <div class=" banner-purchase">
+                <div class="pur-left-main">
+                    <div class="pur-left">
+                        <h2 class="crunch-exp">EXPLORE
+                            CRUNCHBOX TOOLS</h2>
+                            <hr class="borderCss">
+                        <div class="purchase-txt">
+                            <h5 class="purchase-body2">Choose from a variety of tools developed by industry leaders</h5>
+                            <p class="purchase-crunchtext">CrunchBox Tools add functionality to your CGX recordings.
+                                Written by leaders in the<br> EEG field
+                                and offered directly through this marketplace. There are three varieties of tools:</p>
+                            <h5 class="purchase-body">Flowpoint Tools</h5>
+                            <p class="purchase-crunchtext">Add-ons to the CGX Flowpoint app running in real time on your
+                                computer.</p>
+                            <h5 class="purchase-body">CrunchBox Analysis Tools</h5>
+                            <p class="purchase-crunchtext">Cloud-based tools running in MatLab or Python on the CGX
+                                Server. Users upload files <br>through Flowpoint to generate a downloaded PDF report.</p>
+                            <h5 class="purchase-body">Hosted Tools</h5>
+                            <p class="purchase-crunchtext">Third-party tools running resident within the CGX Flowpoint
+                                app.</p>
+                            <p class="crunch-clickinfo"><a [routerLink]="['/marketplace']">Click for more details on
+                                    CrunchBox tool development,
+                                    licensing, validation,<br>
+                                    and how to participate in the marketplace.</a></p>
+                        </div>
+                        <div class="" style="display: none;">
+
+                            <div>
+                                <i class="fa fa-search cr-search"></i><input placeholder="Search" type="text"
+                                    #movieSearchInput class="searchbox cr-search-input" [(ngModel)]="SearchText"
+                                    (ngModelChange)="checkText($event)">
+                            </div>
+                            <div class="row">
+                                <ng-container *ngIf="apiResponse?.status == 403; else elseTemplate">
+                                    <div class="col-12 text-center" *ngIf="searchFlag">
+                                        {{apiResponse?.Msg}}
+                                    </div>
+                                </ng-container>
+                                <ng-template #elseTemplate>
+                                    <div *ngIf="searchFlag">
+                                        <div class="col-12" *ngFor="let results of apiResponse.toolData">
+
+                                            <a
+                                                [routerLink]="['/crunchboxdetails', results.id]">{{results.tool_name}}</a>
+                                        </div>
+                                    </div>
+                                </ng-template>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pur-right-main">
+                    <div class="pur-right">
+                        <img src="" class="" />
+                    </div>
+                </div>
+
+                <div class="row colnew-width-98-new" *ngIf="crunch?.length > 0">
+                    <ng-container *ngFor="let d of crunch; let i = index">
+                        <div [ngClass]=" getBoxIndex(i) ? ' toolBox2' :'toolBox'">
+                            <div class="card-body sleepsuitetool1">
+                                <h5 class="card-title">{{d.tool_name}}</h5>
+                                <p class="authorize-card-text">{{d.description_name}}</p>
+                                <a class="btn btn-outline-secondary learnbtn inline-btn"
+                                   [routerLink]="['/crunchboxdetails']" [queryParams]="{id:d.id}" (click)="setPurchased(d.purchasedTools)"
+                                    class="box-footer">Details</a>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

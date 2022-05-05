@@ -1,0 +1,29 @@
+<!--new style layout-->
+<p-toast position="bottom-right" key="approveKey"></p-toast>
+<div class="container-fluid bg">
+    <app-header></app-header>
+    <div class="container-fluid body-box-crunch">
+        <div class="crunch-box-bar">
+        </div>
+
+        <div class="crunch-item-bg ">
+            <!-- <div style="width: 350px; margin: 0 auto;"> <img src="../../assets/images/reject.png"> <p>Your user is now
+                rejected.</p>
+            </div> -->
+            <div class="crunch-right-sub-head">Please contact us regarding your <br>
+                CGX Flowpoint registration
+                <p class="smalltext pt-4">Sales@CGXSystemscom</p>
+            </div>
+            <p class="small ">An email has been sent to the email address on file</p>
+        </div>
+        <!--end crunch item box-->
+    </div>
+    <!--end 2nd container-fluid-->
+    <div *ngIf="blocked_approve_Wait">
+        <div class="loader" id="loaderSelection" role="dialog">
+            <img src="assets/images/loader.gif" alt="Loader" />
+        </div>
+    </div>
+</div>
+<!--end container-fluid-->
+<app-footer></app-footer>

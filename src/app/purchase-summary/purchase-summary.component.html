@@ -1,0 +1,228 @@
+<p-toast position="bottom-right" key="removeKey"></p-toast>
+
+<div class="container-fluid bg purchase-summary-main">
+  <app-header></app-header>
+  <div class="container-fluid body-box-crunch">
+    <div class="crunch-box-bar">
+      <div class="crunch-head"> PURCHASE SUMMARY</div>
+    </div>
+    <div class="main-content">
+      <h2 class="purchase-head">PURCHASE</h2>
+      <hr class="borderCss">
+      <div class="purchase-main-div">
+        <div class="purchase-main-div-row">
+          <form [formGroup]="purchasform" (ngSubmit)="onSubmit()" class="purchase-form">
+            <div class="row">
+              <div class="billing-boxInfo">
+                <h2 class="purchase-billing-info">Billing Information</h2>
+                <div class="row f-box f-box-left-new pl-0">
+                  <div class="fieldname">
+                    <div class="row nameError">
+                      <label class="label-placeholder firstName-label FName-label" for="firstName">First Name</label>
+                      <div *ngIf="submitted && f.firstName.invalid" class="profile-invalid-error">
+                        <div *ngIf="f.firstName.errors.required">Required</div>
+                        <div *ngIf="f.firstName.errors.pattern">Invalid</div>
+                      </div>
+                    </div>
+                    <input type="text" id="firstName" class="form-control noFocus py-2 input-textbox firstName"
+                      name="firstName" formControlName="firstName" placeholder="" pattern="[a-zA-Z]+" id="firstName"
+                      [ngClass]="{ 'is-invalid': submitted && f.firstName.invalid }" autofocus/>
+                  </div>
+                  <div class="fieldname">
+                    <div class="row nameError">
+                      <label class="label-placeholder lastName-label FName-label" for="lastName">Last Name</label>
+                      <div *ngIf="submitted && f.lastName.errors" class="invalid-error">
+                        <div *ngIf="f.lastName.errors.required">Required</div>
+                        <div *ngIf="f.lastName.errors.pattern">Invalid</div>
+                      </div>
+                    </div>
+                    <input type="text" id="lastName" class="form-control noFocus py-2 input-textbox lastName"
+                      name="lastName" formControlName="lastName" placeholder="" pattern="[a-zA-Z]+"
+                      [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                  </div>
+                  <div class="fieldname">
+                    <div class="row nameError">
+                      <label class="label-placeholder address-label FName-label" for="address">Billing Address</label>
+                      <div *ngIf="submitted && f.address.errors" class="profile-invalid-error">
+                        <div *ngIf="f.address.errors.required">Required</div>
+                      </div>
+                    </div>
+                    <input type="text" id="address" formControlName="address" name="address"
+                      class="form-control noFocus py-2 input-textbox address" placeholder=""
+                      [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+                  </div>
+                  <div class="fieldname fieldname-state-city">
+                    <div class="row cityState">
+                      <div class="row cityLabel">
+                        <label class="label-placeholder city-label float-left FName-label" for="city">City</label>
+                        <div *ngIf="submitted && f.city.errors" class="city-invalid-error">
+                          <div *ngIf="f.city.errors.required">Required</div>
+                        </div>
+                      </div>
+                      <div class="row stateLabel">
+                        <label class="label-placeholder state-label FName-label" for="state">State</label>
+                        <div *ngIf="submitted && f.state.errors" class="state-invalid-error">
+                          <div *ngIf="f.state.errors.required">Required</div>
+                        </div>
+                      </div>
+                    </div>
+                    <input type="text" id="city" name="city" formControlName="city"
+                      class="form-control noFocus py-2 input-textbox city" placeholder=""
+                      [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+                    <select name="state" class="form-control country-form" formControlName="state" id="state"
+                      [ngClass]="{ 'is-invalid': submitted && f.state.errors }">
+                      <option value="">Please Select </option>
+                      <option *ngFor="let state of stateList; let i = index" [value]="stateList[i].sortname">
+                        {{stateList[i].name}}
+                      </option>
+                    </select>
+
+                  </div>
+                  <div class="fieldname">
+                    <div class="row nameError">
+                      <label class="countrylabel-placeholder FName-label" for="country">Country</label>
+                      <div *ngIf="submitted && f.country.errors" class="profile-invalid-error1">
+                        <div *ngIf="f.country.errors.required">Required</div>
+                      </div>
+                    </div>
+                    <select name="country" class="form-control country-form1 " (change)="changeCountry($event)"
+                      formControlName="country" id="country"
+                      [ngClass]="{ 'is-invalid': submitted && f.country.errors }">
+                      <option value="">Please Select </option>
+                      <option *ngFor="let country of countryListAllIsoData; let i = index"
+                        [value]="countryListAllIsoData[i].sortname">
+                        {{countryListAllIsoData[i].name}}
+                      </option>
+                    </select>
+
+                  </div>
+
+
+                  <div class="fieldname fieldname-zip-phone">
+                    <div>
+                      <div class="row zipphone">
+                        <div class="row ziplabel">
+                          <label class="label-placeholder zip-label float-left FName-label" for="zip">ZIP Code</label>
+                          <div *ngIf="submitted && f.zip.errors" class="zip-invalid-error">
+                            <div *ngIf="f.zip.errors.required">Required</div>
+                            <div *ngIf="f.zip.errors.pattern">Invalid</div>
+                          </div>
+                        </div>
+                        <div class="row phonelabel">
+                          <label class="label-placeholder phone-label FName-label" for="phone">Phone</label>
+                          <div *ngIf="submitted && f.phone.errors" class="phone-invalid-error">
+                            <div *ngIf="f.phone.errors.required">Required</div>
+                            <div *ngIf="f.phone.errors.pattern">Invalid</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="zip-phone">
+                        <input type="text" id="zip" name="zip" formControlName="zip" pattern="[0-9]+"
+                          class="form-control noFocus py-2 input-textbox zip" placeholder=""
+                          [ngClass]="{ 'is-invalid': submitted && f.zip.errors }" />
+                        <input type="text" id="phone" name="phone" formControlName="phone" pattern="[0-9\+\-\ ]+"
+                          class="form-control noFocus py-2 input-textbox phone" placeholder=""
+                          [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                      </div>
+                      <!-- <div class="d-flex justify-content-between"> -->
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-boxInfo">
+                <h2 class="card-details">Card Details</h2>
+                <div class="f-box f-box-card-new">
+                  <div class="fullField cardtype-leftd">
+                    <div class="row nameError">
+                      <label class="label-placeholder card-label" for="cardofType">Card Type</label>
+                      <div *ngIf="submitted && f.cardofType.errors" class="invalid-error">
+                        <div *ngIf="f.cardofType.errors.required">Incorrect</div>
+                      </div>
+                    </div>
+                    <select name="cardofType" class="form-control select1" (change)="changeWebsite($event)"
+                      formControlName="cardofType" id="cardofType"
+                      [ngClass]="{ 'is-invalid': submitted && f.cardofType.errors }">
+                      <option value="">Please Select </option>
+                      <option *ngFor="let cards of cardType; let i = index" [value]="cardType[i].id">
+                        {{cardType[i].name}}
+                      </option>
+                    </select>
+
+                  </div>
+                  <div class="fullField purchase-cardnumber">
+                    <div class="row nameError">
+                      <label class="label-placeholder card-label" for="CardNumber">Card Number</label>
+                      <div *ngIf="submitted && f.CardNumber.errors" class="invalid-error">
+                        <div *ngIf="f.CardNumber.errors.required">Incorrect</div>
+                        <div *ngIf="!purchasform.controls.CardNumber.valid && purchasform.controls.CardNumber.dirty"
+                          class="invalid-error">Credit Card is invalid</div>
+                      </div>
+
+                    </div>
+
+                    <input type="text" #ccNumber="ccNumber" name="CardNumber" autocomplete="cc-number"
+                      [(ngModel)]="cardNumberValue" (ngModelChange)="checkCardNumber($event)"
+                      formControlName="CardNumber" class="form-control noFocus py-2 input-textbox cc-number"
+                      placeholder="" [ngClass]="{ 'is-invalid': submitted && f.CardNumber.errors }" ccNumber />
+                    <div class="scheme" *ngIf="cardNumberFlag">{{ccNumber.resolvedScheme$ | async}}</div>
+
+                    <!-- <div *ngIf="!purchasform.controls.CardNumber.valid && purchasform.controls.CardNumber.dirty"
+                      class="invalid-error">Credit Card is invalid</div> -->
+
+                  </div>
+                  <div class="cartField cardtype-leftd">
+                    <div class="row nameError">
+                      <label class="label-placeholder-expdate card-label" for="expDate">Expire Date (MM/YYYY)</label>
+                      <div *ngIf="submitted && f.expDate.errors" class="invalid-error exp-error">
+                        <div *ngIf="f.expDate.errors.required">Incorrect</div>
+                        <div *ngIf="!purchasform.controls.expDate.valid && purchasform.controls.expDate.dirty">Date
+                          invalid</div>
+                      </div>
+                    </div>
+                    <input type="text" id="cc-exp-date" autocomplete="cc-exp" name="expDate" formControlName="expDate"
+                      class="form-control noFocus py-2 input-textbox cc-exp" placeholder=""
+                      [ngClass]="{ 'is-invalid': submitted && f.expDate.errors }" ccExp />
+                  </div>
+                  <div class="cartField cardnumber-rightd">
+                    <div class="row nameError">
+                      <label class="label-placeholder-cvv card-label" for="securityCode">Security Code (CVV)</label>
+                      <div *ngIf="submitted && f.securityCode.errors" class="invalid-error cvv-error">
+                        <div *ngIf="f.securityCode.errors.required">Incorrect</div>
+                        <div *ngIf="f.securityCode.errors.minlength">Min 3</div>
+                        <div *ngIf="f.securityCode.errors.maxlength">Max 3</div>
+                      </div>
+                    </div>
+                    <input type="text" id="securityCode" name="securityCode" formControlName="securityCode"
+                      class="form-control noFocus py-2 input-textbox" placeholder="" minlength="3" maxlength="3"
+                      [ngClass]="{ 'is-invalid': submitted && f.securityCode.errors }" autocomplete="off" ccCVC />
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input #saveUserNameCheckBox [checked]="saveUsername" type="checkbox" class="purchase-checkbox"
+                      id="customCheck1" name="savecard" formControlName="savecard"
+                      (change)="onSaveUsernameChanged(saveUserNameCheckBox.checked)">
+                    <label class="custom-control-label" for="customCheck1">Save Card?</label>
+                  </div>
+                </div>
+              </div>
+              <div class="boxInfo">
+                <h2 class="purchase-summary">Purchase Summary</h2>
+                <div class="row f-box f-box-right-new">
+                  <div class="d-flex justify-content-between sleeptxt col-md-12">
+                    <h3 class="sleep-h3">{{productdetail.tool_name}}</h3>
+                    <a class="removetxt" (click)=remove();>Remove</a>
+                  </div>
+                  <div class="d-flex justify-content-between amount-main-div">
+                    <h3 class="amount-h3">Total Amount</h3>
+                    <label class="cost-label">{{productdetail.price | currency :'USD':'symbol':'3.0' }} USD</label>
+                  </div>
+                  <hr>
+                </div>
+                <button type="submit" class="sub-btn sub-btn-rr">Confirm My Purchase</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>

@@ -1,0 +1,93 @@
+<div class="container-fluid bg purchase-summary-main">
+    <app-header></app-header>
+    <div class="container-fluid">
+        <div class="crunch-box-bar">
+            <div class="crunch-head">ADD NEW CARD</div>
+        </div>
+        <div class="crunch-item-bg">
+            <label class="crunch-exp">ADD PAYMENT METHOD</label>
+            <hr class="borderCss">
+            <div class="sub-section" id="cardaddDiv">
+                <div class="row">
+                    <div class="card-Detail1">
+                        <form [formGroup]="addcardForm" (ngSubmit)="cardSubmit()">
+                            <label class="crunch-sub-head">Card Details</label>
+                            <div class="">
+                                <div class="row nameError">
+                                    <label class="label-placeholder" for="cardofType">Card Type</label>
+                                    <div *ngIf="cardinfo && cardsinfo.cardofType.errors"
+                                        class="invalid-error float-left">
+                                        <div *ngIf="cardsinfo.cardofType.errors.required">Required</div>
+                                    </div>
+                                </div>
+                                <select name="cardofType" class="form-control field1 dropField"
+                                    (change)="changeWebsite($event)" formControlName="cardofType" id="cardofType"
+                                    [ngClass]="{ 'is-invalid': cardinfo && cardsinfo.cardofType.errors }" autofocus>
+                                    <option value="">Please Select </option>
+                                    <option *ngFor="let cards of cardType; let i = index" [value]="cardType[i].id">
+                                        {{cardType[i].name}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="">
+                                <div class="row nameError">
+                                    <label class="label-placeholder" for="CardNumber">Card Number</label>
+                                    <div *ngIf="cardinfo && cardsinfo.CardNumber.errors" class="invalid-error">
+                                        <div *ngIf="cardsinfo.CardNumber.errors.required">Required</div>
+                                        <div *ngIf="!addcardForm.controls.CardNumber.valid && addcardForm.controls.CardNumber.dirty"
+                                            class="invalid-error">Invalid</div>
+                                    </div>
+                                </div>
+                                <input type="tel" #ccNumber="ccNumber" name="CardNumber" autocomplete="cc-number"
+                                    [(ngModel)]="cardNumberValue" (ngModelChange)="checkCardNumber($event)"
+                                    formControlName="CardNumber"
+                                    class="form-control field1 noFocus py-2 input-textbox cc-number" placeholder=""
+                                    [ngClass]="{ 'is-invalid': cardinfo && cardsinfo.CardNumber.errors }" ccNumber />
+                                <div class="scheme" *ngIf="cardNumberFlag">{{ccNumber.resolvedScheme$ | async}}</div>
+                            </div>
+                            <div class="">
+                                <div class="row nameError">
+                                    <label class="label-placeholder" for="expDate">Expire Date (MM/YYYY)</label>
+                                    <div *ngIf="cardinfo && cardsinfo.expDate.errors" class="invalid-error">
+                                        <div *ngIf="cardsinfo.expDate.errors.required">Required</div>
+                                        <div *ngIf="!addcardForm.controls.expDate.valid && addcardForm.controls.expDate.dirty"
+                                            class="invalid-error">Invalid</div>
+                                    </div>
+                                </div>
+                                <input type="tel" id="cc-exp-date" autocomplete="cc-exp" name="expDate"
+                                    formControlName="expDate"
+                                    class="form-control field2 noFocus py-2 input-textbox cc-exp" placeholder=""
+                                    [ngClass]="{ 'is-invalid': cardinfo && cardsinfo.expDate.errors }" ccExp /><br>
+
+                            </div>
+                            <div class="">
+                                <div class="row nameError">
+                                    <label class="label-placeholder" for="securityCode">Security Code (CVV)</label>
+                                    <div *ngIf="cardinfo && cardsinfo.securityCode.errors" class="invalid-error">
+                                        <div *ngIf="cardsinfo.securityCode.errors.required">Required
+                                        </div>
+                                        <div *ngIf="cardsinfo.securityCode.errors.minlength">Min 3</div>
+                                        <div *ngIf="cardsinfo.securityCode.errors.maxlength">Max 3</div>
+                                    </div>
+                                </div>
+                                <input type="tel" id="securityCode" name="securityCode" formControlName="securityCode"
+                                    class="form-control field2 noFocus py-2 input-textbox" placeholder="" minlength="3" maxlength="3"
+                                    [ngClass]="{ 'is-invalid': cardinfo && cardsinfo.securityCode.errors }"
+                                    autocomplete="off" ccCVC /><br>
+                            </div>
+                            <div class="">
+                                <button type="submit" name="cardadd" class="addcard-btn">Add Card</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-Detail2">
+                        <div class="crunch-sub-head1">Other Payment Options</div>
+                        <div class="crunch-content">Contact CGX to arrange payment via wire transfer,<br> check, or
+                            ACH.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

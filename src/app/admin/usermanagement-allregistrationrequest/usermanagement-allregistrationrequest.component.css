@@ -1,0 +1,342 @@
+.bg {
+  /* background-color:#fff; */
+  padding-top: 80px;
+}
+
+.navbar-light {
+  padding-left: 2.1%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 2%;
+}
+
+.navbar-light .navbar-brand {
+  padding-left: 0px !important;
+  height: auto;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#navbarCollapse {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#navbarCollapse .navbar-nav {
+  height: 26.7px;
+}
+
+.profile-name-top {
+  margin-right: 7.25px
+}
+
+.user-icon-li i {
+  margin-top: 10px;
+  margin-right: 7.25px
+}
+
+.box-crunch {
+  height: auto !important;
+}
+
+.crunch-box-bar .crunch-head {
+  color: #fefefe;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 140px;
+  /* padding-top: 9px; */
+  /* padding-left:156px;
+      padding-top: 7px; */
+}
+
+.crunch-box-bar .returncrunch-right {
+  color: #fefefe;
+  font-size: 16px;
+  margin-right: 137px;
+  /* margin-top: 8px; */
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fefefe;
+}
+
+.crunch-usermanagement {
+  color: #fefefe;
+}
+
+.allreg-name {
+  padding-left: 70px;
+}
+
+.newregistration-table tr td:first-child {
+  padding-left: 70px;
+
+}
+
+.admin-crunch {
+  border-left: 1px solid #FFFFFF;
+  color: #fefefe;
+  opacity: 0.5;
+  padding-left: 13px;
+}
+
+.admin-newregistrationrequests {
+  width: 85.6%;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-top: 67px;
+  border-radius: 2px;
+  padding: 46px 79px 46px 79px;
+  margin-bottom: 60px;
+}
+
+::ng-deep .yesbtn.ui-button-text-icon-left .ui-button-text {
+  background-color: #FFFFFF !important;
+  color: #2c2c2c !important;
+}
+
+::ng-deep .nobtn.ui-button-text-icon-left .ui-button-text {
+  background-color: #1E76AC !important;
+  color: #FFFFFF !important;
+}
+
+::ng-deep .ui-button-icon-left.ui-clickable.pi.pi-check {
+  color: black !important;
+}
+
+::ng-deep .ui-button-icon-left.ui-clickable.pi.pi-times {
+  color: #FFFFFF !important;
+}
+::ng-deep .ui-toast-message-content{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+.user-registration-request {
+  padding-bottom: 10px;
+}
+
+.user-registration-request2 {
+  padding-bottom: 25px;
+}
+
+.all-registration {
+  /* padding-top:46px; */
+  font-weight: 500;
+  font-size: 20px;
+  overflow: auto;
+}
+
+.float-left {
+  padding-left: 0px !important;
+}
+
+.float-right-n {
+  float: right;
+  text-align: right;
+  padding-right: 0px !important;
+}
+
+.new-registration-request {
+  font-size: 14px;
+  color: #1E76AC;
+  text-align: center;
+  padding: 12px 34px 12px 34px;
+  text-align: center;
+  border: 1px solid #1e76ac;
+}
+
+
+.new-registration-request:hover {
+  background-color: white;
+  color: #1E76AC;
+}
+
+.all-registration-request {
+  color: #fff;
+  font-size: 14px;
+  padding: 12px 34px 12px 34px;
+  background-color: #1e76ac;
+}
+
+.management-label {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.newregistration-table {
+  overflow-y: auto;
+  display: flow-root;
+}
+
+.newregistration-table tr td {
+  border-top: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
+.newregistration-table tr td {
+  width: 20% !important;
+  word-break: break-all;
+}
+
+.newregistration-table tr th {
+  width: 21% !important;
+}
+
+.deleteicon {
+  padding-left: 30px;
+}
+
+.removebtn {
+  padding-right: 70px;
+}
+
+.newregistration-table tbody tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+
+thead {
+  background: #4B8693;
+}
+
+.newregistration-head {
+  font-size: 20px;
+}
+
+.newreg-name {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+th {
+  color: white;
+}
+
+.newreg-viewdetails {
+  color: #1e76ac;
+}
+
+.allregistration-pagination {
+  display: inline-block;
+  float: right;
+  /* padding-top:5.2%; */
+  margin-top: 24px;
+  margin-bottom: 22px;
+}
+
+.allregistration-pagination a {
+  padding: 4px 4px;
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 19px;
+
+}
+
+.allregistration-pagination a.active {
+  color: #1e76ac;
+}
+
+.admin-user {
+  padding-top: 10px;
+}
+
+.search {
+  width: 34.9%;
+  border-radius: 50px;
+  height: 40px;
+}
+
+.cr-search {
+  width: 8px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 18px;
+  font-size: 18px;
+}
+
+.cr-search-input {
+  padding-left: 47px;
+  padding-top: 8px;
+  font-size: 15px;
+}
+
+@media (min-width: 1250px) {
+  .newregistration-table tr th:first-child {
+    /* padding-left: 5.1%; */
+    width: 22.6%;
+  }
+
+  .newregistration-table {
+    display: inline-table !important;
+  }
+
+  .new-registration-request {
+    padding: 12px 34px;
+    width: auto !important;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 1300px) {
+  .crunch-box-bar .crunch-head {
+    font-size: 18px;
+    margin-left: 5.3%;
+  }
+
+  .management-label, .admin-crunch {
+    font-size: 14px;
+  }
+
+  .all-registration {
+    font-size: 20px;
+    padding-top: 0px;
+  }
+
+  .admin-newregistrationrequests {
+    margin-top: 42px !important;
+    padding-top: 33px;
+    width: 89.4%;
+    padding-left: 25px;
+    padding-right: 25px
+  }
+
+  .new-registration-request, .all-registration-request {
+    width: auto !important;
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .newregistration-head {
+    font-size: 18px;
+  }
+
+  .newregistration-table tr td {
+    font-size: 18px !important;
+    ;
+  }
+
+  .crunch-box-bar {
+    min-height: 56px;
+  }
+
+  .crunch-box-bar .returncrunch-right {
+    margin-right: 67px;
+  }
+
+  .bg {
+    padding-top: 56px !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-md-6 {
+    width: auto;
+  }
+}

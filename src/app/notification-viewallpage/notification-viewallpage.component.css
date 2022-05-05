@@ -1,0 +1,234 @@
+.bg{
+    background-color:#f0f0f0;
+    /* padding-top:80px; */
+  }
+  .crunch-box-bar{
+    background-color: #1e76ac;
+}
+
+  
+  .purchase-summary-main nav a .logo-crunch{
+    margin: -1px 7px 14px 52px;
+    /* padding: 15px 33px 15px 40px; */
+    }
+    .profile-details{
+      margin-right: 200px;
+      padding-top: 9px;
+      padding-right: 23px;
+    }
+    .purchase-summary-main nav{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .box-crunch{
+        height: auto !important;
+    }
+    .box-crunch1{
+      height: auto !important;
+      background-color: #f0f0f0;
+  }
+    .crunch-box-bar .crunch-head {
+        color:#fefefe;  
+        font-size: 24px;
+        font-weight: bold;
+        margin-left: 8%;
+        padding-top: 9px;
+        padding-bottom: 9px
+       
+      }
+      .crunch-box-bar  .returncrunch-right{
+        color:#fefefe; 
+        font-size: 16px;
+        margin-right: 40px;
+        margin-right: 26px;
+        margin-top: 8px;
+        font-family: HelveticaNeue;
+        font-size: 16px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fefefe;
+      }
+      .crunch-head span{
+      color: #fefefe;
+      font-size: 24px;
+      font-weight: bold;
+      }
+      
+      .crunch-box-bar .fa {
+        color:#fefefe;   
+      }
+      .crunch-box-bar a {
+        color:#fefefe;   
+      }
+      .after-line::after {
+        content: "|";
+        color: #4b8693 !important;
+        margin-left: 12px;
+      }
+      .user-icon-li{
+        display: flex;
+    }
+    .user-icon-li i{
+      margin-left: 5px;
+      margin-top: 10px;
+    }
+    ::ng-deep .ui-dialog-footer .ui-button {
+      background-color: white  !important;
+    }
+    
+    .All-notifications{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 84px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.2);
+        /* width: 87%;
+        margin: 0 auto; */
+        margin-top: 51px;
+        margin-left:  calc((100% - 980px) * 0.5);
+        width: 980px;
+        padding-bottom: 9px;
+        
+    }
+    .app-launch-det{
+      padding-top: 4px !important;
+    }
+    .notification-border{
+      border-bottom:1px solid rgba(0, 0, 0, 0.2);
+      width: 90%;
+      margin:0 auto;
+    }
+    .All-notifications .crunch-All-notification {  
+        font-size: 28px;
+        font-weight: bold;
+        /* padding-top: 40px; */
+        color: #1e76ac;
+        
+        /* padding-left:156px;
+        padding-top: 7px; */
+      }
+      .All-notifications .Deletenotification-right{
+        color:#fefefe; 
+        font-size: 14px;
+        margin-top: 38px;
+        font-family: HelveticaNeue;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #fefefe;
+        border-radius: 50px;
+        padding: 7px 21px 8px 20px;
+        background-color: #1E76AC;
+      }
+      .notification-details{
+        /* width: 87%;
+        margin: 0 auto; */
+        width: 980px;
+        margin: 0 auto;
+        margin-left:  calc((100% - 980px) * 0.5);
+    
+      }
+      .app-launched{
+        padding-top: 40px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .appdetails-border{
+        border-radius: 6px;
+        box-shadow: 0 4px 15px 2px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-top: 11px;
+        padding-top: 40px;
+        padding-bottom: 35px;
+        margin-bottom: 35px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        /* margin-top:11px; */
+      }
+      .app-name{
+        font-size: 24px;
+        font-weight: 500;
+        color: #4b4b4b;
+        padding-left: 3.9%;
+      }
+      .app-launch-det{
+        font-weight: 500;
+        font-size: 18px;
+        color: #4B4B4B;
+      }
+      .app-date-time{
+        font-weight: bold;
+        font-size: 18px;
+        color: #1E76AC;
+      }
+      /* .ui-confirmdialog .ui-button{
+        background-color: red !important;
+      } */
+      .app-button-open{
+        border: 1px solid #996C85;
+        box-sizing: border-box;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 14px;
+        color: #996c85;
+        margin: 0px 15px 0 5.8px;
+        padding: 8px 34px 7px 35px;
+        background-color: #fff;
+      }
+      .app-button-open:hover{
+        background-color: white;;
+      }
+      .app-button-delete{
+        border: 1px solid #996C85;
+        background: #996C85;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 14px;
+        margin: 0px 15px 0 5.8px;
+        padding: 8px 30px 7px 31px;
+        color: #fff;
+        /* margin: 0 15px 0 0;
+        padding: 8px 15px 7px 31px; */
+      }
+      .notification-pagination {
+        display: inline-block;
+        margin-right: 6.5%;
+        float: right;
+        padding-top:2px;
+      }
+      
+      .notification-pagination a {
+        color: black;
+        float: left;
+        padding: 4px 4px;
+        text-decoration: none;
+      }
+      .notification-pagination a.active {
+        color: #1e76ac;
+      }
+
+    .ff-one{
+      text-align: right;
+    }
+    .ff-two{
+      text-align: left;
+    }
+    
+.boxContainer{
+  width: 980px;
+}
+.boxInside{
+  width: 245px;
+}
+.buttonInside{
+  width: 122px;
+}

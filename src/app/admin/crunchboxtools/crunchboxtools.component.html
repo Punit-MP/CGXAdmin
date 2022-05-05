@@ -1,0 +1,102 @@
+<p-toast position="bottom-right" key="removeKey"></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+<div class="container-fluid bg purchase-summary-main">
+  <app-admin-header></app-admin-header>
+  <div class="container-fluid box-crunch">
+    <div class="crunch-box-bar">
+      <div class="crunch-head">CrunchBox Tools</div>
+      <div class="returncrunch-right">
+        <span style="cursor: pointer;" class="management-label" [routerLink]="['/admin/usermanagement']">User
+          Management</span>
+        <span style="cursor: pointer;" class="admin-crunch" [routerLink]="['/admin/crunchboxtools']"> CrunchBox
+          Tools</span>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid admin-crunchboxtools">
+    <div class="d-flex user-registration-request">
+      <i class="fa fa-search cr-search"></i><input class="form-control mr-sm-2 search mr-auto cr-search-input"
+        [(ngModel)]="searchKey" (ngModelChange)="filterTable($event)" type="search" placeholder="Search"
+        aria-label="Search">
+      <button type="button" class="btn btn-primary add-tools ml-auto" [routerLink]="['/admin/add-tool']">Add New Tools
+        <i class="fa fa-plus crunch-plus"></i>
+      </button>
+    </div>
+    <table class="table crunchboxtools-table">
+      <thead class="thead text-center">
+        <tr class="crunchbox-header">
+          <th class="col-md-3">Tool Name</th>
+          <th class="col-md-3">Tool Description</th>
+          <th class="col-md-3">Cost</th>
+          <th class="col-md-3">View</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <tr *ngFor="let tool of crunchtools  | paginate: { itemsPerPage: 10, currentPage: p }">
+          <td>{{tool.tool_name}}</td>
+          <td>{{tool.short_description}}</td>
+          <td>{{tool.price | currency :'USD':'symbol':'3.0'}}</td>
+          <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details',tool.id]">Details</a></td>
+        </tr>
+        <!--  <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']" >View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr>
+          <tr>
+            <td >Sleep Scoring Tool</td>
+            <td>Tool Description </td>
+            <td>$2,500</td>
+            <td><a class="crunchtool-viewdetails" [routerLink]="['/admin/tool-details']">View Details</a></td>
+          </tr> -->
+      </tbody>
+    </table>
+    <div class="allregistration-pagination">
+      <pagination-controls *ngIf="crunchtools?.length > 0" (pageChange)="p = $event"></pagination-controls>
+      <!-- <jw-pagination [items]="tools" (changePage)="onChangePage($event)"></jw-pagination> -->
+    </div>
+  </div>
+</div>

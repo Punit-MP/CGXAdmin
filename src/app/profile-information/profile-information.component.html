@@ -1,0 +1,198 @@
+<!-- <p-toast position="bottom-right" key="resetKey"></p-toast>
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog> -->
+<!-- <p-dialog content [(visible)]="display">
+    Content
+</p-dialog> -->
+<p-toast position="bottom-right"></p-toast>
+<div class="container-fluid bg purchase-summary-main">
+  <app-header></app-header>
+  <div class="container-fluid body-box-crunch">
+    <div class="crunch-box-bar">
+      <div class="crunch-head">Profile</div>
+      <!-- <div class="returncrunch-right"><a routerLink='/crunchbox'>Return To FlowPoint Start Page </a></div> -->
+    </div>
+    <div class="main-content-profile">
+      <div class="crunch-right-head">Account<br>Information</div>
+      <hr class="borderCss">
+      <div class="profile-main-div">
+        <div class="profile-main-div-row">
+          <div class="first-sep prof-left-div">
+            <div class="row profile-ul">
+              <div class="accountBox">
+                <div class="profileSubHead">Profile</div>
+                <div class="sub-section" id="accont-section">
+                  <form [formGroup]="profileform" (ngSubmit)="profileSubmit()" novalidate>
+                    <div class="">
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder FName-label" for="firstName">First Name</label>
+                          <div *ngIf="submittedinfo && profile.firstName.invalid" class="invalid-error">
+                            <div *ngIf="profile.firstName.errors.required">Required</div>
+                            <div *ngIf="profile.firstName.errors.pattern">Invalid</div>
+                          </div>
+                        </div>
+                        <input type="text" id="firstName" [(ngModel)]="user.first_name" pattern="[a-zA-Z]+"
+                          class="form-control noFocus py-2 input-textbox firstName" name="firstName" id="firstName"
+                          formControlName="firstName" placeholder=""
+                          [ngClass]="{ 'is-invalid': submittedinfo && profile.firstName.invalid }" autofocus/>
+                      </div>
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder FName-label" for="firstName">Last Name</label>
+                          <div *ngIf="submittedinfo && profile.lastName.errors" class="invalid-error">
+                            <div *ngIf="profile.lastName.errors.required">Required</div>
+                            <div *ngIf="profile.lastName.errors.pattern">Invalid</div>
+                          </div>
+                        </div>
+                        <input type="text" id="lastName" [(ngModel)]="user.last_name" pattern="[a-zA-Z]+"
+                          class="form-control noFocus py-2 input-textbox" name="lastName" formControlName="lastName"
+                          placeholder="" [ngClass]="{ 'is-invalid': submittedinfo && profile.lastName.errors }" />
+                      </div>
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder FName-label" for="institution">Phone Number</label>
+                          <div *ngIf="submittedinfo && profile.institution.errors" class="invalid-error">
+                            <div *ngIf="profile.institution.errors.required">Required</div>
+                            <div *ngIf="profile.institution.errors.pattern">Invalid</div>
+                          </div>
+                        </div>
+                        <input type="text" pattern="[0-9\+\-\ ]+" id="institution" [(ngModel)]="user.institution" formControlName="institution"
+                          class="form-control noFocus py-2 input-textbox" name="institution" placeholder=""
+                          [ngClass]="{ 'is-invalid': submittedinfo && profile.institution.errors }" />
+                      </div>
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder FName-label" for="email">Email</label>
+                          <div *ngIf="submittedinfo && profile.email.errors" class="invalid-error">
+                            <div *ngIf="profile.email.errors.required">Required</div>
+                            <div *ngIf="profile.email.errors.email">Invalid</div>
+                          </div>
+                        </div>
+                        <input type="text" id="email" [(ngModel)]="user.email" formControlName="email"
+                          class="form-control noFocus py-2 input-textbox" name="email" placeholder=""
+                          [ngClass]="{ 'is-invalid': submittedinfo && profile.email.errors }" />
+                      </div>
+                      <!-- <div class="accField">
+                        <button type="submit" name="confirm" class="addcard-btn">Update</button>
+                      </div> -->
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="accountBox">
+                <div class="profileSubHead">Change Password</div>
+                <div class="sub-section" id="changepassword-section">
+                  <form [formGroup]="changeForm" (ngSubmit)="onSubmit()" novalidate
+                    [mustMatch]="['newpassword', 'confirmpass']">
+                    <div class="pass-sec">
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder pass-label" for="fname">Current Password</label>
+                          <div *ngIf="submitted && f.currentpassword.invalid" class="invalid-error">
+                            <div *ngIf="f.currentpassword.errors.shouldBe1234">Not valid</div>
+                          </div>
+                        </div>
+                        <input [type]="showNewPassword ? 'text' : 'password'" id="currentPassword"
+                          class="form-control fadeIn second" name="currentpassword" formControlName="currentpassword"
+                          placeholder="" [ngClass]="{ 'is-invalid': submitted && f.currentpassword.invalid }">
+
+                        <i alt="show" class="eye-show reset-eye-one" (click)="showNewPassword = !showNewPassword"
+                          [class.hide]="!showNewPassword"></i>
+                        <i alt="hide" class="eye-hide reset-eye-one" (click)="showNewPassword = !showNewPassword"
+                          [class.hide]="showNewPassword"></i>
+                        <!-- <img src="../../assets/images/profile-eyeicon.png" class="eye-hide reset-eye-one" (click)="showNewPassword = !showNewPassword"
+                          [class.hide]="showNewPassword" /> -->
+                      </div>
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder pass-label" for="newpassword">New Password</label>
+                          <div *ngIf="submitted && f.newpassword.invalid" class="invalid-error">
+                            <div *ngIf="f.newpassword.errors.minlength">Min 6</div>
+                          </div>
+                        </div>
+                        <input [type]="showPassword ? 'text' : 'password'" id="newpassword" name="newpassword"
+                          formControlName="newpassword" class="fadeIn form-control second" minlength="6" placeholder=""
+                          [ngClass]="{ 'is-invalid': submitted && f.currentpassword.invalid }">
+
+                        <i alt="show" class="eye-show reset-eye-two" (click)="showPassword = !showPassword"
+                          [class.hide]="!showPassword"></i>
+
+                        <i alt="hide" class="eye-hide reset-eye-two" (click)="showPassword = !showPassword"
+                          [class.hide]="showPassword"></i>
+                      </div>
+                      <div class="accField">
+                        <div class="row nameError">
+                          <label class="label-placeholder pass-label" for="confirmpass">Confirm Password</label>
+                          <div *ngIf="submitted && f.confirmpass.invalid" class="invalid-error">
+                            <div *ngIf="f.confirmpass.errors.mustMatch">Mismatch</div>
+                          </div>
+                        </div>
+                        <input [type]="showConfirmPassword ? 'text' : 'password'" id="confirmpass" name="confirmpass"
+                          formControlName="confirmpass" class="form-control fadeIn second" placeholder=""
+                          [ngClass]="{ 'is-invalid': submitted && f.currentpassword.invalid }">
+                        <i alt="show" class="eye-show reset-eye-three"
+                          (click)="showConfirmPassword = !showConfirmPassword" [class.hide]="!showConfirmPassword"></i>
+                        <i alt="hide" class="eye-hide reset-eye-three"
+                          (click)="showConfirmPassword = !showConfirmPassword" [class.hide]="showConfirmPassword"></i>
+                      </div>
+                      <div class="accField">
+                        <button type="submit" name="changep" class="addcard-btn" (click)="profileSubmit()">Save
+                          changes</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="accountBox">
+                <div class="remove-left">
+                  <div class="profileSubHead">Payment Methods</div>
+                  <div class="payment-sec" *ngFor="let card of cards">
+                    <!-- <img src="../../assets/images/visa-1.png" class="card-image" /> -->
+                    <!-- <div class="col-md-3 mt-2">VISA</div> -->
+                    <div class="card-num">Ending in {{card.cardNumber| slice:-4}}</div>
+                    <div class="card-num">Expires {{card.expirationMonth }}/{{card.expirationYear}}</div>
+                    <img (click)="removeCard(card.paymentInstrumentId)" src="../../assets/images/delete-btn.png"
+                      class="profileinfo-delete" style="cursor: pointer;" />
+                    <!-- <div class="col-md-3 mt-2">Download Invoice</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="borderCss">
+          <div class="border-sep prof-right-div">
+            <div class="profileSubHead2">Billing Information</div>
+            <div class="sub-section" id="Billing-section">
+              <div class="row">
+                <div class="table-header-div">
+                  <div class="tbHead">CrunchBox Tool</div>
+                  <div class="tbHead">Date Paid</div>
+                  <div class="tbHead">Amount</div>
+                  <div class="tbHead">Renewal Date</div>
+                  <div class="tbHead">Renew</div>
+                  <div class="tbHead">Download</div>
+                </div>
+              </div>
+              <div class="row tbContent" *ngFor="let list of order">
+                <div class="table-body-div">
+                  <div class="tbBody">{{list.tool_name}}</div>
+                  <div class="tbBody">{{list.order_date | date: 'dd/MM/yyyy'}}</div>
+                  <div class="tbBody">{{list.total}} USD</div>
+                  <div class="tbBody">NA</div>
+                  <div class="tbBody">NA</div>
+                  <div class="tbBody"><a target="__blank"
+                      href="{{list.invoiceUrl}}"
+                      class="viewinvoice">View Invoice</a></div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>

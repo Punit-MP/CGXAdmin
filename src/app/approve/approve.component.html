@@ -1,0 +1,25 @@
+<!--new style layout-->
+<p-toast position="bottom-right" key="approveKey"></p-toast>
+<div class="container-fluid bg">
+    <app-header></app-header>
+    <div class="container-fluid body-box-crunch">
+        <div class="crunch-box-bar">
+        </div>
+        <div class="crunch-item-bg pt-5 pb-5">
+            <div style="margin: 0 auto; text-align: center;"> <img src="../../assets/images/green-tick.png">
+                <p class="approvefont">CGX Flowpoint is
+                    now ready to use</p>
+                <p class="small">A confirmation email has been sent to the email address on file</p>
+            </div>
+        </div>
+        <!--end crunch item box-->
+    </div>
+    <!--end 2nd container-fluid-->
+    <div *ngIf="blocked_approve_Wait">
+        <div class="loader" id="loaderSelection" role="dialog">
+            <img src="assets/images/loader.gif" alt="Loader" />
+        </div>
+    </div>
+</div>
+<!--end container-fluid-->
+<app-footer></app-footer>

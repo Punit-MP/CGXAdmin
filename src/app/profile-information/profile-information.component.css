@@ -1,0 +1,461 @@
+.bg {
+  background-color: #f0f0f0;
+}
+.crunch-box-bar {
+  padding-left: calc((100% - 980px) * 0.5);
+  padding-top: 18px;
+  padding-bottom: 19px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 68px;
+  background-color: #1e76ac;
+}
+.crunch-box-bar .crunch-head {
+  color: #fefefe;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.main-content-profile {
+  width: 980px;
+  margin-left: calc((100% - 980px) * 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 51px;
+  margin-bottom: 51px;
+}
+.profile-ul{
+  list-style: none;
+  margin-top: 23.5px;
+  width: 980px;
+}
+.profile-ul a{
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000;
+  margin-right: 222px;
+}
+.profile-ul a.active-a{
+  color: #1e76ac;
+  /* border-bottom: 3px solid #1e76ac; */
+  padding-bottom: 12px;
+  margin-right: 222px;
+  text-decoration: none;
+}
+
+.profile-head {
+  font-family: HelveticaNeue;
+  font-size: 72px;
+  color: #7d7d7d;
+  width: 445px;
+  padding-bottom: 18px;
+  margin: 0px;
+  font-weight: 300 !important;
+}
+::ng-deep .ui-toast-message-content{
+  background-color: #ffffff;
+  font-weight: bold;
+}
+::ng-deep .ui-toast-message{
+  margin-bottom: 20px !important;
+}
+::ng-deep .ui-toast .ui-toast-message-content {
+  padding-left:20px !important;
+}
+
+.crunch-right-head {
+  font-family: HelveticaNeueLight;
+  font-size: 72px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.97;
+  letter-spacing: 2.84px;
+  text-align: left;
+  color: #7d7d7d;
+  text-transform:uppercase;
+  width: 980px;
+  margin-bottom: 18px;
+  margin-left: calc((100% - 980px) * 0.5);
+}
+.row{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+.main-div-main {
+  clear: both;
+}
+.first-profile-div {
+  width: 250px;
+  margin-right: 78px;
+  float: left;
+  margin-bottom: 44px;
+}
+.first-profile-div input {
+  width: 250px;
+  padding-left: 10px;
+}
+.second-profile-div input {
+  width: 250px;
+  padding-left: 10px;
+}
+.second-profile-div {
+  width: 250px;
+  margin-right: 79px;
+  float: left;
+}
+.third-profile-div {
+  width: 323px;
+  float: right;
+
+}
+.third-profile-div label{
+  padding-bottom: 17px;
+}
+.third-first-label {
+  margin-right: 35px;
+}
+.third-profile-div label,
+.third-profile-div i {
+  float: left;
+  font-size: 14px;
+  color: #555353;
+  font-weight: 300;
+
+}
+
+.profile1-head,
+.changepassword-head,
+.payment-head {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+.payment-head {
+  margin-bottom: 24px;
+}
+.label-placeholder {
+  width: 125px;
+  height: 12px;
+  flex-grow: 0;
+  margin-bottom: 0px;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #555353;
+}
+.invalid-error{
+  width: 125px;
+}
+.invalid-error div {
+  text-align: right;
+}
+.nameError{
+  width: 250px;
+  height: 5px;
+}
+.save-btn {
+  width: 200px;
+  padding: 16px 37px 17px 38px;
+  border-radius: 30px;
+  background-color: #1e76ac;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  color: #fff;
+  border: none;
+  margin-top: 30px;
+  /* margin-bottom: 29px; */
+}
+.profileinfo-delete {
+  width: 29.5px;
+  height: 18px;
+  /* margin-bottom: 16px; */
+}
+.addcard-btn {
+  flex-grow: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 30px;
+  background-color: #1e76ac;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+  border: none;
+  padding: 14px 18px;
+  margin-top: 30px;
+  width: 200px;
+  height: 45px;
+  flex-grow: 0;
+}
+.profile-main-div-row{
+ width: 980px;
+ margin-left: 0px !important;
+ margin-right: 0px !important;
+} 
+.profile-main-div{
+  width: 980px;
+}
+.billing-head {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 29px;
+  /* border-top: 1px solid #969695; */
+  padding-top: 15.5px;
+  width: 980px;
+}
+.table-header-div div {
+  padding-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2a2929;
+}
+.profile-viewinvoice {
+  margin-left: 15px;
+}
+.profile-app-name1,
+.pro-bill-orderdate,
+.profile-amt1,
+.pro-bill-orderdate1,
+.profile-viewinvoice {
+  font-size: 14px;
+}
+.viewinvoice{
+  color: #2A2929
+}
+.pro-bill-orderdate{
+  margin-left:9px;
+}
+.profile-amt1{
+  margin-left: 14px;
+}
+.pro-bill-orderdate1{
+  margin-left: 13px;
+}
+.profile-acctinfo {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px;
+}
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  border: none;
+  border-radius: 0px;
+  color: #0d0d0d;
+  padding: 0px 0px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0px 0px;
+  padding-left: 6px;
+}
+#currentPassword, #newpassword, #confirmpass{
+  padding-right: 32px;
+}
+.input[type="text"]:focus {
+  outline: none;
+}
+.eye-show,
+.eye-hide {
+  float: right;
+  position: relative;
+  top: -24px;
+  left: -18px;
+  margin-bottom: -20px;
+  width: 18.2px;
+  height: 12px;
+  padding-left: 25px;
+  padding-bottom: 14px;
+}
+
+
+.inner-addon {
+  position: relative;
+}
+
+.table-header-div {
+  border-bottom: 1px solid #969695;
+  display: flex;
+  width: 980px;
+  color: #696969;
+  margin-top: 7px;
+}
+.tableSize {
+  width: 980px;
+  margin-left: calc((100% - 980px) * 0.5);
+}
+
+.table-body-div {
+  display: flex;
+  width: 100%;
+}
+.payment-sec {
+  /* background-color: #e9f5fc; */
+  display: flex;
+  /* justify-content: space-around; */
+  width: 326px;
+  font-weight: bold;
+  padding:0;
+  margin-top: 22px;
+}
+.payment-h2 {
+  padding-top: 40px;
+}
+.pass-se {
+  margin-top: 55px;
+}
+.currentPassword {
+  width: 90%;
+  float: left;
+}
+.card-image {
+  width: 50px;
+  height: 16px;
+  margin-top: 10px;
+}
+
+.active-a:hover {
+  text-decoration: none;
+}
+.hide {
+  display: none;
+}
+
+.prof-left-div ul li {
+  padding-top: 33px !important;
+}
+
+.prof-left-div ul li a {
+  margin-right: 0px !important;
+}
+.fa{
+  font-size: 12px;
+}
+.formbox {
+  height: 37px;
+}
+.prof-left-div {
+  padding: 0px;
+  /* padding-left: 17px; */
+  margin-bottom: 29px;
+}
+
+.form-control {
+  opacity: 0.9 !important;
+  border-radius: 2px !important;
+  border: solid 0.2px #555353 !important;
+  background-color: #fff !important;
+  width: 250px !important;
+  height: 30px !important;
+  flex-grow: 0 !important;
+  margin: 12px 0 14px 0 !important;
+}
+.borderCss{
+  margin: 0 auto;
+  width: 980px;
+  border-bottom: 1px solid #969695;
+}
+.accountBox{
+  width: 326px;
+}
+.profileSubHead{
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a2929;
+  margin-bottom: 24px;
+}
+.profileSubHead2{
+  width: 144px;
+  height: 20px;
+  margin: 15.5px 41px 29px 0px;
+  font-family: HelveticaNeue;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a2929;
+}
+.accField{
+  width: 250px;
+}
+.card-num{
+  height: 12px;
+  padding: 0 35px 0 0;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  text-align: left;
+  color: #555353;
+}
+.tbHead{
+  width: 245px;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a2929;
+}
+.tbBody{
+  margin: 2.5px 0px 2.5px 0px;
+  width: 245px;
+  font-family: HelveticaNeue;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2a2929;
+}
+.tbContent{
+  margin-top: 10px;
+}
+.FName-label{
+  padding-left: 7px;
+}
+.pass-label{
+  padding-left: 5px;
+}
+::ng-deep .ui-toast .ui-toast-message-content {
+  padding-left:24px !important;
+}
